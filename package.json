@@ -1,5 +1,43 @@
 {
   "name": "Bagquest",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "6.1.0"
+  },
+  "scripts": {
+    "postinstall": "webpack",
+    "webpack": "webpack --mode=development --watch"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rikasun/Bagquest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rikasun/Bagquest/issues"
+  },
+  "homepage": "https://github.com/rikasun/Bagquest#readme"
 }
