@@ -18,9 +18,9 @@ const Empty = () => <div />
 const App = ({store}) => (
   <div>
     <Modal />
-    <header>
+    <nav>
       <GreetingContainer />
-    </header>
+    </nav>
     <Switch>
       <AuthRoute exact path="/login" component={Modal}/>
       <AuthRoute exact path="/signup" component={Modal}/>

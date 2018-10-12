@@ -18,10 +18,14 @@ const Greeting = ({ currentUser, logout, openModal, history, modal }) => {
     }
   };
   const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.email.split("@")[0]}!</h2>
-      <button className="header-button" onClick={()=>logout("login").then(() => history.push('/login'))}>Log Out</button>
-    </hgroup>
+    <div className="nav-bar">
+      <div>bagquest icon here</div>
+      <div className="search-bar">  <input className="search-bar-content" type="text" placeholder="Search"/></div>
+      <div className="user-name">link to user-profile:{currentUser.email.split("@")[0]}</div>
+      <div className="hamburger">
+        <button className="logout-button" onClick={()=>logout("login").then(() => history.push('/login'))}>Log Out</button>
+      </div>
+    </div>
   );
 
   return currentUser ? personalGreeting() : sessionLinks();
