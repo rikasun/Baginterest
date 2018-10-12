@@ -8,22 +8,26 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
+import { AuthRoute, RedirectIfLoggedOut } from '../util/route_util';
 
 
-const App = () => (
+const App = ({store}) => (
   <div>
+    <Modal />
     <header>
-      <Link to="/" className="header-link">
-        <h1>Bagquest</h1>
-      </Link>
       <GreetingContainer />
     </header>
     <Switch>
-      <Route exact path="/login" component={LogInFormContainer} />
-      <Route exact path="/signup" component={SignUpFormContainer} />
+      <AuthRoute exact path="/login" component={Modal}/>
+      <AuthRoute exact path="/signup" component={Modal}/>
+
+      <RedirectIfLoggedOut to="login"/>
+      <Redirect to="/signup"/>
+
     </Switch>
   </div>
 );

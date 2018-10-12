@@ -10,9 +10,33 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+
  *= require_self
  */
+ .login-signup {
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    right: 92px;
+ }
+ .modal-background {
+    background-image: url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg");
+    position: fixed;
+    top: 0;
+    /* margin-top: 34px; */
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+ .modal-child {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
 
  body {
      font-family: 'Abel', sans-serif;
@@ -27,33 +51,6 @@
     height: 500px;
     float: left;
     position: relative;
-  }
-
-  .reviews {
-    float: left;
-  }
-
-  .review-form {
-    float: left;
-  }
-
-  .bench-index-item {
-    border: 1px solid black;
-    width: 100%;
-    margin-bottom: 5px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .bench-index-item img {
-    height: 200px;
-    max-width: 130px;
-  }
-
-  .user-pane {
-    display: flex;
-    justify-content: center;
   }
 
   .right-half {
@@ -90,82 +87,8 @@
     margin-left: 5%;
   }
 
-  h1, h5 {
-    margin-bottom: 0px;
-  }
-
-  .single-bench-show {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .single-bench-map {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .bench-list {
-    padding-left: 0;
-    list-style-position: inside;
-    margin-top: 0;
-  }
-
-  .index-image {
-    max-height: 200px;
-    max-width: 100px;
-  }
-
-  .review-button, .review-form {
-    width: 100px;
-    margin-top: 20px;
-  }
-
-  .review-button {
-    /* padding-top: 1px; */
-  }
-
-  .header-name {
-    margin: 7px 0 0 0;
-
-  }
-
-  .header-favorites {
-    margin: 4px 0 4px 0;
-    font-size: 14px;
-  }
-
-  .new-bench-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-
-  .new-bench-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    outline: black 1px solid;
-    padding: 5px 30px 10px 30px;
-  }
-
-  .new-bench-title {
-    text-align: center;
-  }
-
   .new-bench-button {
     margin: 5px;
-  }
-
-  input.bench-field {
-    margin: 10px;
-    padding: 2px;
-  }
-
-  label.bench-field {
-    width: 125px;
-    display: inline-block;
   }
 
   .button-holder {
@@ -174,25 +97,18 @@
     flex-direction: column;
   }
 
-  input.new-bench-button {
-    width: 160px;
-    margin-top: 10px;
-  }
-
-  button.new-bench-button {
-    width: 160px;
-  }
-
   .login-form-container {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    z-index: 10;
   }
 
   .login-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    z-index: 10;
   }
 
   .login-input {
@@ -202,21 +118,20 @@
   .login-form-box {
     outline: 1px solid black;
     padding: 20px;
-  }
+    z-index: 10;
+    background: white;
+}
 
-  .filter {
-    font-weight: bold;
-  }
+form {
+    display: block;
+    margin-top: 0em;
+}
 
   .header-link {
     text-decoration: none;
     color: black;
   }
 
-  hr {
-    border-bottom: 1px solid grey;
-  }
-
   .session-submit {
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
   }
