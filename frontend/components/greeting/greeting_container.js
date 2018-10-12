@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
+import { withRouter } from 'react-router-dom';
 import Greeting from './greeting';
 
 const mapStateToProps = ({ session, entities: { users }, ui }) => {
@@ -21,4 +22,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Greeting);
+)(withRouter(Greeting));

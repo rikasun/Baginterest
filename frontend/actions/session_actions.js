@@ -48,10 +48,9 @@ export const login = (user) => {
 };
 
 export const logout = () => {
-  debugger
   return dispatch => {
     return APIUtil.logout().then(user => {
-      dispatch(logoutCurrentUser());
+      return dispatch(logoutCurrentUser());
     });
   };
 };

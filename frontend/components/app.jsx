@@ -12,9 +12,9 @@ import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import { AuthRoute, RedirectIfLoggedOut } from '../util/route_util';
+import { AuthRoute, ProtectedRoute, RedirectIfLoggedOut } from '../util/route_util';
 
-
+const Empty = () => <div />
 const App = ({store}) => (
   <div>
     <Modal />
@@ -24,10 +24,7 @@ const App = ({store}) => (
     <Switch>
       <AuthRoute exact path="/login" component={Modal}/>
       <AuthRoute exact path="/signup" component={Modal}/>
-
-      <RedirectIfLoggedOut to="login"/>
-      <Redirect to="/signup"/>
-
+      <ProtectedRoute path="/" component={Empty} />
     </Switch>
   </div>
 );
