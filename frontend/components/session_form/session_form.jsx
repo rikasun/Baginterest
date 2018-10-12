@@ -51,6 +51,7 @@ class SessionForm extends React.Component {
         return (
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
+              <div><i class="fab fa-pinterest fa-signup"></i></div>
                <h2 className="session-header1">Welcome to Bagquest</h2>
                <h4 className="session-header2">Find new ideas for bags</h4>
 
@@ -96,6 +97,7 @@ class SessionForm extends React.Component {
         return (
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
+              <div><i class="fab fa-pinterest fa-login"></i></div>
               <h2 className="session-header1">Welcome back</h2>
               <h4 className="session-header2">Login to see more</h4>
 

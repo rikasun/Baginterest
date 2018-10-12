@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logout, openModal, history, modal }) => {
   };
   const personalGreeting = () => (
     <div className="nav-bar">
-      <div>bagquest icon here</div>
+      <div><i class="fab fa-pinterest fa-nav"></i></div>
       <div className="search-bar">  <input className="search-bar-content" type="text" placeholder="Search"/></div>
       <div className="user-name">link to user-profile:{currentUser.email.split("@")[0]}</div>
       <div className="hamburger">
