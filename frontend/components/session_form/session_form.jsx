@@ -14,6 +14,10 @@ class SessionForm extends React.Component {
     });
   }
 
+  componentWillUnmount(){
+    this.props.receiveErrors([])
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state).then(this.props.closeModal);
@@ -21,13 +25,13 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-   <div>
+   <ul className="errors">
      {this.props.errors.map((error, i) => (
        <li key={`error-${i}`}>
          {error}
        </li>
      ))}
-   </div>
+   </ul>
 
     );
   }
