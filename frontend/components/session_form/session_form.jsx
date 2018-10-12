@@ -21,13 +21,14 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+   <div>
+     {this.props.errors.map((error, i) => (
+       <li key={`error-${i}`}>
+         {error}
+       </li>
+     ))}
+   </div>
+
     );
   }
 
@@ -40,20 +41,18 @@ class SessionForm extends React.Component {
         return (
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              Welcome to Bagquest
-              <br/>
-              Find new ideas for bags
-              <br/>
+               <h2 className="session-header1">Welcome to Bagquest</h2>
+               <h4 className="session-header2">Find new ideas for bags</h4>
 
               {this.renderErrors()}
               <div className="login-form">
-                <br/>
+
 
                   <input type="text"
                     placeholder="Email"
                     value={this.state.email}
                     onChange={this.update('email')}
-                    className="session-submit"
+                    className="session-input"
                     />
 
                 <br/>
@@ -63,7 +62,7 @@ class SessionForm extends React.Component {
                     type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
-                    className="session-submit"
+                    className="session-input"
                     />
 
                 <br/>
@@ -73,13 +72,13 @@ class SessionForm extends React.Component {
                     type="number"
                     value={this.state.age}
                     onChange={this.update('age')}
-                    className="session-submit"
+                    className="session-input"
                     />
 
                 <br/>
-                <input className="session-submit" type="submit" value="continue" />
+                <input className="session-submit" type="submit" value="Continue" />
               </div>
-              <Link to="/login">Already a member? Log in</Link>
+              <div className="redirect-link"><Link className="link-style" to="/login">Already a member? Log in</Link></div>
             </form>
           </div>
         )
@@ -87,18 +86,18 @@ class SessionForm extends React.Component {
         return (
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              Welcome Back
-              <br/>
+              <h2 className="session-header1">Welcome back</h2>
+              <h4 className="session-header2">Login to see more</h4>
+
 
               {this.renderErrors()}
               <div className="login-form">
-                <br/>
 
                   <input type="text"
                     placeholder="Email"
                     value={this.state.email}
                     onChange={this.update('email')}
-                    className="session-submit"
+                    className="session-input"
                     />
 
                 <br/>
@@ -108,13 +107,15 @@ class SessionForm extends React.Component {
                     type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
-                    className="session-submit"
+                    className="session-input"
                     />
 
                 <br/>
-                <input className="session-submit" type="submit" value="continue" />
+                <input className="session-submit" type="submit" value="Log in" />
               </div>
-              <Link to="/signup">Need an account? Sign up now</Link>
+
+              <div className="redirect-link"><Link className="link-style" to="/signup">Need an account? Sign up now</Link></div>
+
             </form>
           </div>
         )

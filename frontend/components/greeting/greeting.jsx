@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout, openModal, history }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      <button onClick={() => history.push('/login')}>Login</button>
+      <button className="corner-login-button" onClick={() => history.push('/login')}>Log in</button>
 
     </nav>
   );

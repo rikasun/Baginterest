@@ -1,0 +1,153 @@
+.login-signup {
+   position: absolute;
+   z-index: 10;
+   top: 50px;
+   right: 92px;
+}
+.corner-login-button {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 8px 50px;
+
+}
+
+.session-header1{
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 3px;
+}
+
+.session-header2{
+  text-align: center;
+  word-wrap: break-word;
+  color: darkgray;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.session-input {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 10px;
+  /* text-transform: capitalize; */
+}
+
+.session-submit {
+  color: white;
+  font-size: 14px;
+  background-color: pink;
+  padding: 8px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+
+.redirect-link {
+  text-align: center;
+}
+
+.link-style {
+  font-family: sans-serif;
+  color: gray;
+  text-decoration: none;
+}
+
+.modal-background {
+   background-image: url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg");
+   position: fixed;
+   background-size: cover;
+   top: 0;
+   /* margin-top: 34px; */
+   bottom: 0;
+   right: 0;
+   left: 0;
+   /* background: rgba(0, 0, 0, 0.7); */
+   z-index: 1;
+   animation: 35s bg linear forwards;
+   -webkit-animation: 35s bg linear forwards;
+}
+
+@-webkit-keyframes bg {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15%);
+    transform: translateY(-15%);
+  }
+}
+@keyframes bg {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15%);
+    transform: translateY(-15%);
+  }
+}
+
+.modal-child {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// body {
+//     font-family: 'Abel', sans-serif;
+//   }
+
+ header {
+   margin-left: 50%;
+ }
+
+ .button-holder {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+ }
+
+.header-button {
+  padding: 20px;
+  font-size: 18px;
+ }
+
+ .login-form-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+   z-index: 10;
+   border: none;
+ }
+
+ .login-form {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   z-index: 10;
+ }
+
+ .login-input {
+   margin-left: 20px;
+ }
+
+ .login-form-box {
+   // outline: 1px solid black;
+   padding: 50px;
+   z-index: 10;
+   background: white;
+   border-radius: 10px;
+}
+//
+// form {
+//    display: block;
+//    margin-top: 0em;
+// }
+//
