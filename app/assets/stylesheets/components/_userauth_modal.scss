@@ -28,6 +28,7 @@
   font-weight: 600;
   border-radius: 5px;
   padding: 8px 50px;
+  cursor: pointer;
 
 }
 
@@ -63,6 +64,7 @@
   border-radius: 3px;
   border: none;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 
@@ -144,7 +146,9 @@
 
 .modal-child {
   position: fixed;
-  top: 45%;
+  width: 375px;
+  height: 400px;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   // animation: 80s bg2 linear infinite;
@@ -180,6 +184,14 @@
  }
 
  .login-form-box {
+   // outline: 1px solid black;
+   padding: 64px;
+   z-index: 10;
+   background: white;
+   border-radius: 10px;
+}
+
+ .signup-form-box {
    // outline: 1px solid black;
    padding: 50px;
    z-index: 10;

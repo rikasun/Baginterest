@@ -50,8 +50,8 @@ class SessionForm extends React.Component {
 
         return (
           <div className="login-form-container">
-            <form onSubmit={this.handleSubmit} className="login-form-box">
-              <div><i class="fab fa-pinterest fa-signup"></i></div>
+            <form onSubmit={this.handleSubmit} className="signup-form-box">
+              <div><i className="fab fa-pinterest fa-signup"></i></div>
                <h2 className="session-header1">Welcome to Bagquest</h2>
                <h4 className="session-header2">Find new ideas for bags</h4>
 
@@ -63,6 +63,15 @@ class SessionForm extends React.Component {
                     placeholder="Email"
                     value={this.state.email}
                     onChange={this.update('email')}
+                    className="session-input"
+                    />
+
+                <br/>
+
+                  <input type="text"
+                    placeholder="Display name"
+                    value={this.state.username}
+                    onChange={this.update('username')}
                     className="session-input"
                     />
 
@@ -97,7 +106,7 @@ class SessionForm extends React.Component {
         return (
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              <div><i class="fab fa-pinterest fa-login"></i></div>
+              <div><i className="fab fa-pinterest fa-login"></i></div>
               <h2 className="session-header1">Welcome back</h2>
               <h4 className="session-header2">Login to see more</h4>
 

@@ -1,32 +1,57 @@
 .nav-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: #8080802e solid 1px;
-    padding-bottom: 18px;
-    padding-top: 11px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: #8080802e solid 1px;
+  padding-bottom: 11px;
+  padding-top: 2px;
 }
 
 .fa-nav {
-  font-size: 40px;
+  font-size: 30px;
   color: pink;
+  border-radius: 100px;
+  padding: 5px;
+
 }
 
-.search-bar {
+.fa-nav:hover {
+  background-color: lightgray;
+}
 
+
+
+.search-bar {
+ position: relative;
+}
+
+.fa-search-icon{
+  position: absolute;
+  top: 9px;
+  left: 14px;
+  color: #808080;
+  font-size: 23px;
+  cursor: pointer;
 }
 
 .search-bar-content {
   background-color: #d3d3d352;
   border-radius: 4px;
-  padding: 13px 350px 13px 10px;
+  padding: 9px 432px 9px 48px;
   border: none;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
+  box-sizing: border-box;
 }
 
 .user-name{
+  border-radius: 100px;
+  padding: 5px;
+  display: flex;
+}
 
+.user-name:hover{
+  background-color: lightgray;
 }
 
 .hamburger{
@@ -38,4 +63,9 @@
   padding: 5px;
   font-size: 12px;
   border-radius: 3px;
+  cursor: pointer;
+ }
+ .logout-button:hover {
+   background-color: lightblue;
+   box-shadow: 2px gray;
  }
