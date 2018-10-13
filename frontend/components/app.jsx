@@ -25,7 +25,7 @@ const App = ({store}) => (
     <Switch>
       <AuthRoute exact path="/login" component={Modal}/>
       <AuthRoute exact path="/signup" component={Modal}/>
-      <Route path="/users/:userId" component={UserProfileContainer} />
+      <Route path="/users/:id" component={UserProfileContainer} />
       <ProtectedRoute exact path="/" component={Empty} />
 
       <Redirect to="/" />

@@ -13,6 +13,15 @@
 #
 
 class User < ApplicationRecord
+  has_one_attached :profile
+
+  has_many :boards,
+  foreign_key: :author_id,
+  class_name: :Board
+
+  has_many :pins,
+  foreign_key: :author_id,
+  class_name: :Pin
 
   attr_reader :password
 

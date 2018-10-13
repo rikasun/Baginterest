@@ -29,7 +29,7 @@ class Modal extends React.Component {
       component = <SignupFormContainer />;
       break;
       default:
-      return null;
+      return component = <SignupFormContainer />;;
     }
     return component;
   }
@@ -49,7 +49,6 @@ class Modal extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     modal: state.ui.modal
   };

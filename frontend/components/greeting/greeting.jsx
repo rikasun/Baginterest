@@ -28,7 +28,7 @@ const Greeting = ({ currentUser, logout, openModal, history, modal }) => {
       </div>
 
       <div className="user-name">
-        <Link to="/users/userId">profileLink</Link>
+      <Link to={`/users/${currentUser.id}`}>profileLink</Link>
         <div>
           {currentUser.username||currentUser.email.split("@")[0]}
         </div>
