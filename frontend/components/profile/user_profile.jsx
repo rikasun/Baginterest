@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const UserProfile = ({currentUserame}) => {
+const UserProfile = ({currentUsername}) => {
 return (
-  <div>{currentUserame}
+  <div>{currentUsername}
   </div>
 )}
 

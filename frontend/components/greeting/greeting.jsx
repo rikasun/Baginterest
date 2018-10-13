@@ -35,7 +35,7 @@ const Greeting = ({ currentUser, logout, openModal, history, modal }) => {
       </div>
 
       <div className="hamburger">
-        <button className="logout-button" onClick={()=>logout("login").then(() => history.push('/login'))}>Log Out</button>
+        <button className="logout-button" onClick={()=>logout().then(() => history.push('/login'))}>Log Out</button>
       </div>
 
     </div>
