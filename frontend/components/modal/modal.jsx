@@ -3,6 +3,7 @@ import { closeModal, openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import CreateBoardContainer from '../board/create_board_container';
 
 class Modal extends React.Component {
   constructor(props){
@@ -23,28 +24,44 @@ class Modal extends React.Component {
     let component;
     switch (this.props.modal) {
       case 'login':
-      component = <LoginFormContainer />;
+        return (
+          <div className="modal-background" onClick={this.props.closeModal}>
+            <div className="modal-child" onClick={e => e.stopPropagation()}>
+              <LoginFormContainer />
+            </div>
+          </div>
+        );
       break;
       case 'signup':
-      component = <SignupFormContainer />;
+        return (
+          <div className="modal-background" onClick={this.props.closeModal}>
+            <div className="modal-child" onClick={e => e.stopPropagation()}>
+              <SignupFormContainer />
+            </div>
+          </div>
+        );
+      break;
+      case 'createBoard':
+          return (
+            <div className="board-modal-background" onClick={this.props.closeModal}>
+              <div className="board-modal-child" onClick={e => e.stopPropagation()}>
+                <CreateBoardContainer />
+              </div>
+            </div>
+          );
+
       break;
       default:
-      return component = <SignupFormContainer />;;
+       return component = <SignupFormContainer />;;
     }
-    return component;
   }
 
   render(){
     if (!this.props.modal) {
       return null;
     }
-    return (
-      <div className="modal-background" onClick={this.props.closeModal}>
-        <div className="modal-child" onClick={e => e.stopPropagation()}>
-          { this.showform() }
-        </div>
-      </div>
-    );
+
+    return this.showform();
   }
 }
 

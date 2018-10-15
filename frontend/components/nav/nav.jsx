@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, logout, openModal, history, modal }) => {
+const Nav = ({ currentUser, logout, openModal, history, modal }) => {
   const sessionLinks = () => {
     if (modal === 'signup') {
       return (
@@ -46,4 +46,4 @@ const Greeting = ({ currentUser, logout, openModal, history, modal }) => {
 };
 
 
-export default Greeting;
+export default Nav;

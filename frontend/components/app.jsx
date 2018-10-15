@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import Modal from './modal/modal';
-import GreetingContainer from './greeting/greeting_container';
+import NavContainer from './nav/nav_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import UserProfileContainer from './profile/user_profile_container';
@@ -21,7 +21,7 @@ const App = ({store}) => (
   <div>
     <Modal />
     <nav>
-      <GreetingContainer />
+      <NavContainer />
     </nav>
     <Switch>
       <AuthRoute exact path="/login" component={Modal}/>

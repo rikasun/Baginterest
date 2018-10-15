@@ -4,11 +4,12 @@ import { fetchUserPins } from '../../actions/pin_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pins: state.entities.pins[ownProps.match.params.userId]
+    pins: Object.values(state.entities.pins)
   }
 }
 
 const mapDispatchToProps = dispatch => ({
+  // fetchUser: (id) => dispatch(fetchUser(id)),
   fetchUserPins: (userId) => dispatch(fetchUserPins(userId))
 })
 

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import BoardIndex from './board_index';
 import { fetchUserBoards } from '../../actions/board_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,8 +10,10 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchUser: (id) => dispatch(fetchUser(id)),
-  fetchUserBoards: (authorId) => dispatch(fetchUserBoards(authorId))
+  // fetchUser: (id) => dispatch(fetchUser(id)),
+  fetchUserBoards: (authorId) => dispatch(fetchUserBoards(authorId)),
+  openModal: (modal) => dispatch(openModal(modal)),
+  closeModal: () => dispatch(closeModal())
 })
 
 

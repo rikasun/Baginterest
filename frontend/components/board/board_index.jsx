@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-
+import Modal from '../modal/modal';
 
 class BoardIndex extends React.Component{
 
@@ -17,7 +17,10 @@ class BoardIndex extends React.Component{
 
   render(){
       return (
-        <div>{this.props.boards.map(board => board.boardName)}</div>
+        <div>
+          <button onClick={() => this.props.openModal("createBoard")}>Create Board</button>
+          <div>{this.props.boards.map(board => board.boardName)}</div>
+        </div>
       );
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class PinIndex extends React.Component{
@@ -11,14 +11,16 @@ class PinIndex extends React.Component{
 
 
   componentDidMount(){
-    this.props.fetchUserPins();
+    this.props.fetchUserPins(this.props.match.params.id);
   }
 
   render(){
       return (
-        <h4>Pins go here!</h4>
+        <div>
+          {this.props.pins.map(pin => pin.authorId)}
+        </div>
       )
   }
 }
 
-export default PinIndex;
+export default withRouter(PinIndex);
