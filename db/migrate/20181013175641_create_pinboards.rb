@@ -6,7 +6,7 @@ class CreatePinboards < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_index :pinboards, :pin_id, unique: true
-    add_index :pinboards, :board_id, unique: true
+    add_index :pinboards, :pin_id
+    add_index :pinboards, :board_id
   end
 end

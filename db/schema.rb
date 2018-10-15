@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2018_10_13_213150) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "author_id", null: false
-    t.index ["author_id"], name: "index_boards_on_author_id", unique: true
+    t.index ["author_id"], name: "index_boards_on_author_id"
     t.index ["board_name"], name: "index_boards_on_board_name"
   end
 
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 2018_10_13_213150) do
     t.integer "board_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["board_id"], name: "index_pinboards_on_board_id", unique: true
-    t.index ["pin_id"], name: "index_pinboards_on_pin_id", unique: true
+    t.index ["board_id"], name: "index_pinboards_on_board_id"
+    t.index ["pin_id"], name: "index_pinboards_on_pin_id"
   end
 
   create_table "pins", force: :cascade do |t|
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2018_10_13_213150) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_pins_on_author_id", unique: true
+    t.index ["author_id"], name: "index_pins_on_author_id"
   end
 
   create_table "userboards", force: :cascade do |t|
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 2018_10_13_213150) do
     t.integer "board_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["board_id"], name: "index_userboards_on_board_id", unique: true
-    t.index ["user_id"], name: "index_userboards_on_user_id", unique: true
+    t.index ["board_id"], name: "index_userboards_on_board_id"
+    t.index ["user_id"], name: "index_userboards_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

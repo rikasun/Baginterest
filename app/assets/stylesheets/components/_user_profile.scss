@@ -1,0 +1,54 @@
+.profile {
+  max-width: 820px;
+  margin: auto;
+}
+
+.name-photo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.user-displayname {
+  font-size: 33px;
+  font-family: sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.user-photo {
+text-decoration: none;
+}
+
+.user-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+
+.user-board-text {
+  text-decoration: none;
+  padding: 12px;
+  color: #808080b3;
+  font-weight: 600;
+  font-family: sans-serif;
+  border-radius: 100px;
+
+}
+
+.user-pin-text {
+  padding-left: 10px;
+  text-decoration: none;
+  padding: 12px;
+  color: #808080b3;
+  font-weight: 600;
+  font-family: sans-serif;
+  border-radius: 100px;
+
+}
+
+.user-board-text:hover, .user-pin-text:hover {
+  background-color: #80808029;
+  text-decoration: underline;
+}

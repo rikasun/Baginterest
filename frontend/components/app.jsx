@@ -13,6 +13,7 @@ import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import UserProfileContainer from './profile/user_profile_container';
+import BoardIndexContainer from './board/board_index_container';
 import { AuthRoute, ProtectedRoute, RedirectIfLoggedOut } from '../util/route_util';
 
 const Empty = () => <div />
@@ -26,6 +27,7 @@ const App = ({store}) => (
       <AuthRoute exact path="/login" component={Modal}/>
       <AuthRoute exact path="/signup" component={Modal}/>
       <Route path="/users/:id" component={UserProfileContainer} />
+      
       <ProtectedRoute exact path="/" component={Empty} />
 
       <Redirect to="/" />

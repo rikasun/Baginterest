@@ -13,7 +13,14 @@ class Board < ApplicationRecord
   validates :board_name, :author_id, presence: true
 
   belongs_to :user,
-  foreign_key: :author_id,
-  class_name: :User
+    foreign_key: :author_id,
+    class_name: :User
 
+  has_many :pinboards,
+    foreign_key: :board_id,
+    class_name: :Pinboard
+
+  has_many :pins,
+    through: :pinboards,
+    source: :pin
 end

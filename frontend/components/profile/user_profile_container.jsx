@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import UserProfile from './user_profile';
-import { requestUser } from '../../actions/user_actions';
+import { fetchUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchUser: (id) => dispatch(requestUser(id))
+  fetchUser: (id) => dispatch(fetchUser(id))
 })
 
 

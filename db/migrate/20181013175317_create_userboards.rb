@@ -6,7 +6,7 @@ class CreateUserboards < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_index :userboards, :user_id, unique: true
-    add_index :userboards, :board_id, unique: true
+    add_index :userboards, :user_id
+    add_index :userboards, :board_id
   end
 end

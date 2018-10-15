@@ -6,9 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user0 = User.create({ email: 'demo@gmail.com', age: 25, password: 'demo25', username: 'demo'})
-user1 = User.create({ email: 'alice@gmail.com', age: 25, password: 'alice25'})
-user2 = User.create({ email: 'bob@gmail.com', age: 100, password: 'bob100'})
-user3 = User.create({ email: 'carly@gmail.com', age: 26, password: 'carly26'})
-user4 = User.create({ email: 'danny@gmail.com', age: 27, password: 'danny27'})
-user5 = User.create({ email: 'eric@gmail.com', age: 31, password: 'eric31'})
+user0 = User.create(email: 'demo@gmail.com', age: 25, password: 'demo25', username: 'demo')
+user1 = User.create(email: 'alice@gmail.com', age: 25, password: 'alice25')
+user2 = User.create(email: 'bob@gmail.com', age: 100, password: 'bob100')
+user3 = User.create(email: 'carly@gmail.com', age: 26, password: 'carly26')
+user4 = User.create(email: 'danny@gmail.com', age: 27, password: 'danny27')
+user5 = User.create(email: 'eric@gmail.com', age: 31, password: 'eric31')
+
+
+board1 = User.first.boards.create(board_name: 'test1')
+board1.pins.create!(user: User.first, description: 'pin1')
+board1.pins.create!(user: User.first, description: 'pin2')
+board2 = User.first.boards.create(board_name: 'test2')
+board2.pins.create!(user: User.first, description: 'pin3')

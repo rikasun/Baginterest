@@ -1,1 +1,1 @@
-json.array! @boards, :board_name, :author_id
+json.array! @boards, :id, :board_name, :author_id
