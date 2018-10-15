@@ -27,7 +27,7 @@ const App = ({store}) => (
       <AuthRoute exact path="/login" component={Modal}/>
       <AuthRoute exact path="/signup" component={Modal}/>
       <Route path="/users/:id" component={UserProfileContainer} />
-      
+
       <ProtectedRoute exact path="/" component={Empty} />
 
       <Redirect to="/" />

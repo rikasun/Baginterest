@@ -28,8 +28,8 @@ export const receiveErrors = (errors) => {
 export const signup = (user) => {
   return dispatch => {
     return APIUtil.signup(user).then(
-      user => {
-      return dispatch(receiveCurrentUser(user));},
+      res => {
+      return dispatch(receiveCurrentUser(res.user));},
       error => {
       return dispatch(receiveErrors(error.responseJSON));}
     );
@@ -39,8 +39,8 @@ export const signup = (user) => {
 export const login = (user) => {
   return dispatch => {
     return APIUtil.login(user).then(
-      user => {
-      return dispatch(receiveCurrentUser(user));},
+      res => {
+      return dispatch(receiveCurrentUser(res.user));},
       error => {
       return dispatch(receiveErrors(error.responseJSON));}
     );

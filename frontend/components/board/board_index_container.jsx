@@ -4,12 +4,13 @@ import { fetchUserBoards } from '../../actions/board_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    boards: state.entities.boards[ownProps.match.params.userId]
+    boards: Object.values(state.entities.boards)
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchUserBoards: (userId) => dispatch(fetchUserBoards(userId))
+  fetchUser: (id) => dispatch(fetchUser(id)),
+  fetchUserBoards: (authorId) => dispatch(fetchUserBoards(authorId))
 })
 
 

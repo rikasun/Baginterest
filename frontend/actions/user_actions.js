@@ -4,8 +4,9 @@ export const RECEIVE_USER = 'RECEIVE_USER';
 
 export const fetchUser = id => {
   return dispatch => {
-    return UserAPIUtil.fetchUser(id).then( user => dispatch({
-      type: RECEIVE_USER, user:user
+    return UserAPIUtil.fetchUser(id).then( res => dispatch({
+      type: RECEIVE_USER,
+      user: res.user
     })
    )
   }

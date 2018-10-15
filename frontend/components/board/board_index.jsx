@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 class BoardIndex extends React.Component{
@@ -11,14 +12,14 @@ class BoardIndex extends React.Component{
 
 
   componentDidMount(){
-    this.props.fetchUserBoards();
+    this.props.fetchUserBoards(this.props.match.params.id);
   }
 
   render(){
       return (
-        <h4>Boards come here!</h4>
-      )
+        <div>{this.props.boards.map(board => board.boardName)}</div>
+      );
   }
 }
 
-export default BoardIndex;
+export default withRouter(BoardIndex);
