@@ -52,3 +52,94 @@ text-decoration: none;
   background-color: #80808029;
   text-decoration: underline;
 }
+
+.board-display {
+  display: flex;
+  justify-content: flex-start;
+  margin:auto;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+.create-board-box{
+  border-radius: 7px;
+  width: 320px;
+  margin-top: 13px;
+  height: 250px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.create-board-box:hover{
+  background-color: #eee;
+}
+
+.plus-sign-box {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  background-color: #d3d3d363;
+  border-radius: 7px;
+  margin: 10px;
+}
+
+.plus-sign {
+  color: #d6405a;
+  font-size: 40px;
+  position: relative;
+  top: 75px;
+  left: 130px;
+}
+
+.create-board-text {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #808080b5;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.single-board {
+  padding: 10px;
+
+  width: 300px;
+  height: 226px;
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.single-board:hover {
+  background-color: #d3d3d363;
+}
+
+.board-preview {
+  display: flex;
+    flex-direction: column;
+    /* width: 300px; */
+    height: 200px;
+    background-color: #d3d3d363;
+    border-radius: 7px;
+    /* margin: 10px;*/
+}
+
+.board-name {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #808080b5;
+  font-weight: 600;
+  margin-left: 1px;
+  margin-top: 8px;
+}
+
+.pin-display {
+  display: flex;
+  justify-content: flex-start;
+  margin:auto;
+  max-width: 1000px;
+}
+
+.single-pin {
+  padding: 20px;
+}

@@ -16,8 +16,16 @@ class PinIndex extends React.Component{
 
   render(){
       return (
-        <div>
-          {this.props.pins.map(pin => pin.authorId)}
+        <div className="pin-display">
+          <div className="create-board-box"onClick={() => this.props.openModal("createPin")}>
+            <div className="plus-sign-box"><i className="fas fa-plus-circle plus-sign"></i></div>
+            <div className="create-board-text">Create Pin</div>
+          </div>
+          {this.props.pins.map(pin =>
+            <div className="single-pin">
+              {pin.authorId}
+            </div>
+          )}
         </div>
       )
   }

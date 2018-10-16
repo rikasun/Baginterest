@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import PinIndex from './pin_index';
 import { fetchUserPins } from '../../actions/pin_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,8 +10,9 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  // fetchUser: (id) => dispatch(fetchUser(id)),
-  fetchUserPins: (userId) => dispatch(fetchUserPins(userId))
+  fetchUserPins: (userId) => dispatch(fetchUserPins(userId)),
+  openModal: (modal) => dispatch(openModal(modal)),
+  closeModal: () => dispatch(closeModal())
 })
 
 

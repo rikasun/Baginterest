@@ -14,11 +14,94 @@
 
 .board-modal-child {
   position: fixed;
-  width: 375px;
-  height: 400px;
-  top: 35%;
+  width: 600px;
+  // max-width: 600px;
+  height: 350px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 10px;
+}
+
+.close-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: gray;
+  font-weight: lighter;
+  border-radius: 100%;
+  padding: 10px 15px 10px 15px;
+}
+
+.close-x:hover{
+  // background-color: lightgray;
+  cursor: pointer;
+}
+
+
+.create-board {
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 25px 25px 15px 15px;
+
+  border-bottom: 1px #eee solid;
+}
+
+.create-board-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-bottom: 1px #eee solid;
+  padding-bottom: 140px;
+}
+
+.create-board-label {
+  font-family: sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  // position: absolute;
+  top: 100px;
+  padding: 15px;
+}
+
+.create-board-input {
+  border-radius: 3px;
+  border: 1px gray solid;
+  width: 250px;
+  height: 17px;
+  margin-left: 25px;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.cancel-button {
+  position: absolute;
+  right: 110px;
+  bottom: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  padding: 13px;
+}
+
+.create-button {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  padding: 13px;
+}
+
+.create-button:hover, .cancel-button:hover {
+  background: lightgray;
+  cursor: pointer;
 }

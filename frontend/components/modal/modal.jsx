@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import CreateBoardContainer from '../board/create_board_container';
+import CreatePinContainer from '../pin/create_pin_container';
 
 class Modal extends React.Component {
   constructor(props){
@@ -25,20 +26,21 @@ class Modal extends React.Component {
     switch (this.props.modal) {
       case 'login':
         return (
-          <div className="modal-background" onClick={this.props.closeModal}>
-            <div className="modal-child" onClick={e => e.stopPropagation()}>
-              <LoginFormContainer />
-            </div>
+          [<div className="modal-background" onClick={this.props.closeModal}>
+          </div>,
+          <div className="modal-child" onClick={e => e.stopPropagation()}>
+            <LoginFormContainer />
           </div>
+          ]
         );
       break;
       case 'signup':
         return (
-          <div className="modal-background" onClick={this.props.closeModal}>
-            <div className="modal-child" onClick={e => e.stopPropagation()}>
-              <SignupFormContainer />
-            </div>
-          </div>
+          [<div className="modal-background" onClick={this.props.closeModal}>
+        </div>,
+          <div className="modal-child" onClick={e => e.stopPropagation()}>
+            <SignupFormContainer />
+          </div>]
         );
       break;
       case 'createBoard':
@@ -49,7 +51,15 @@ class Modal extends React.Component {
               </div>
             </div>
           );
-
+      break;
+      case 'createPin':
+          return (
+            <div className="pin-modal-background" onClick={this.props.closeModal}>
+              <div className="pin-modal-child" onClick={e => e.stopPropagation()}>
+                <CreatePinContainer />
+              </div>
+            </div>
+          );
       break;
       default:
        return component = <SignupFormContainer />;;

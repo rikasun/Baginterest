@@ -1,20 +1,20 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { receiveBoard, createBoard, receiveBoardErrors } from '../../actions/board_actions';
+import { receivePin, createPin, receivePinErrors } from '../../actions/pin_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import CreateBoard from './create_board';
+import CreatePin from './create_pin';
 
 const mapStateToProps = (state) => {
   return {
-    board: {boardName: ''}
+    pin: {url: '', description: ''}
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-  createBoard: (board) => dispatch(createBoard(board)),
+  createPin: (pin) => dispatch(createPin(pin)),
   closeModal: () => dispatch(closeModal())
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateBoard);
+export default connect(mapStateToProps, mapDispatchToProps)(CreatePin);

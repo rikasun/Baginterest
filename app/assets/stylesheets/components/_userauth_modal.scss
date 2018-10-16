@@ -80,12 +80,12 @@
 
 .modal-background {
    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-   url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg");
+   url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg") repeat;
    position: fixed;
-   background-size: cover;
-   background-size: 100% 100%;
+   // background-size: cover;
+   // background-size: 100% 100%;
    // background-size:contain;
-
+   zoom: 80%;
 
 
    top: 0;
@@ -93,56 +93,31 @@
    bottom: 0;
    right: 0;
    left: 0;
+   height: 180vh;
    /* background: rgba(0, 0, 0, 0.7); */
    z-index: 1;
-   // animation: 80s bg linear infinite;
-   // -webkit-animation: 80s bg linear infinite;
+   animation: 40s bg linear infinite;
+   // -webkit-animation: 15s bg linear infinite;
 }
 
 // https://stackoverflow.com/questions/26429284/vertically-sliding-css-background-image
 
-@-webkit-keyframes bg {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-15%);
-    transform: translateY(-15%);
-  }
-}
+// @-webkit-keyframes bg {
+//   0% {
+//     transform: translate3d(0,0,0);
+//   }
+//   100% {
+//     transform: translate3d(0,-200px,0);
+//   }
+// }
 @keyframes bg {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    transform: translate3d(0,0,0);
   }
   100% {
-    -webkit-transform: translateY(-15%);
-    transform: translateY(-15%);
+    transform: translate3d(0,-200px,0);
   }
 }
-
-@-webkit-keyframes bg2 {
-  50% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(15%);
-    transform: translateY(15%);
-  }
-}
-@keyframes bg2 {
-  50% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(15%);
-    transform: translateY(15%);
-  }
-}
-
 
 .modal-child {
   position: fixed;
@@ -151,8 +126,7 @@
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // animation: 80s bg2 linear infinite;
-  // -webkit-animation: 80s bg2 linear infinite;
+  z-index: 2;
 }
 
 // body {
