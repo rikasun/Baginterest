@@ -38,8 +38,8 @@ export const fetchPin = (id) => (dispatch) => {
   .then(pin => dispatch(receivePin(pin)));
 };
 
-export const createPin = (pin) => (dispatch) => {
-  return PinAPIUtil.createPin(pin).then(
+export const createPin = (data) => (dispatch) => {
+  return PinAPIUtil.createPin(data).then(
     pin => {
       return dispatch(receivePin(pin));},
     error => {

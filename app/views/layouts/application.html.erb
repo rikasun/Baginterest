@@ -9,10 +9,10 @@
     <%= javascript_include_tag 'application' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <script type=“text/javascript”>
- window.images = {
-   logo: “<%= image_url('pinterest_icon.png') %>“,
-   profile: “<%= image_url('profile.png') %>“
- }
+
+   window.logo = “<%= asset_path('pinterest_icon.png') %>“,
+   window.profile = “<%= asset_path('profile.png') %>“
+
 </script>
   </head>
 

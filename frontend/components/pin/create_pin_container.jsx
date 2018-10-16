@@ -6,7 +6,10 @@ import CreatePin from './create_pin';
 
 const mapStateToProps = (state) => {
   return {
-    pin: {url: '', description: ''}
+    pin: {
+      url: '', description: '',
+      photoUrl: null, photo: null
+    }
   };
 };
 

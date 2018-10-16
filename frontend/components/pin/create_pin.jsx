@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Dropzone from 'react-dropzone';
 class CreatePin extends React.Component {
   constructor(props) {
     super(props);
@@ -16,11 +17,28 @@ class CreatePin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPin(this.state).then(this.props.closeModal);
+    let data = new FormData();
+    data.append("pin[url]", this.state.url);
+    data.append("pin[description]", this.state.description);
+    data.append("pin[photo]", this.state.photo);
+    this.props.createPin(data).then(this.props.closeModal);
   }
 
   componentWillUnmount(){
     // this.props.receiveBoardErrors([])
+  }
+
+  onDrop(files) {
+    let file = files[0];
+    let reader = new FileReader();
+    reader.onloadend = () => {
+      this.setState({
+        photo: file,
+        photoUrl: reader.result
+      });
+    }
+
+    reader.readAsDataURL(file);
   }
 
   renderErrors() {
@@ -45,13 +63,20 @@ class CreatePin extends React.Component {
 
         <div className="create-pin-content">
           <div className="create-pin-content-left">
-            <div className="pin-dropzone">
 
-              <div className="camera"><i className="fas fa-camera"></i></div><br/>
-              <div className="dropzone-text">
-                Drag and drop or <br/>click to upload</div>
-              </div>
+                <Dropzone className="pin-dropzone" onDrop={this.onDrop.bind(this)}>
 
+                  <img className="dropzone-preview" src={this.state.photoUrl} />
+
+                <div className="camera"><i className="fas fa-camera"></i></div>
+
+                    <div className="dropzone-text">
+                  <div>Drag and drop or <br/>click to upload</div>
+                 </div>
+
+
+
+          </Dropzone>
 
           </div>
 

@@ -2,5 +2,7 @@
 
 json.array! @pins do |pin|
   json.extract! pin, :id, :description, :author_id, :url
-  # json.photoUrl url_for(pin.photo)
+  if pin.photo.attached?
+    json.photoUrl url_for(pin.photo)
+  end
 end

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+// import Form from './form'
 
 class PinIndex extends React.Component{
 
@@ -23,7 +23,7 @@ class PinIndex extends React.Component{
           </div>
           {this.props.pins.map(pin =>
             <div className="single-pin">
-              {pin.authorId}
+              <img className="pin-photo" src={pin.photoUrl}/>
             </div>
           )}
         </div>

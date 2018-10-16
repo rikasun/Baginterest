@@ -50,6 +50,18 @@
   display: flex;
 }
 
+.nav-profile {
+  width: 40px;
+  height: auto;
+}
+
+.nav-displayname {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
 .user-name:hover{
   background-color: lightgray;
 }
@@ -66,6 +78,6 @@
   cursor: pointer;
  }
  .logout-button:hover {
-   background-color: lightblue;
+   background-color: pink;
    box-shadow: 2px gray;
  }

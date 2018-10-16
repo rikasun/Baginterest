@@ -24,6 +24,7 @@ class UserProfile extends React.Component{
   render(){
 
     if (!this.props.user) return "";
+    let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-dev/VTcR7xgf9bmBUBogucw5Kt7L"
     return (
       <div>
         <div className="profile">
@@ -34,7 +35,8 @@ class UserProfile extends React.Component{
             </div>
 
             <div>
-              <Link className="user-photo" to={`/users/${this.props.user.id}/boards`}>profile photo:link for now</Link>
+              <Link  to={`/users/${this.props.user.id}/boards`}>{<img className="user-photo" src={url} alt="user profile link"/>}</Link>
+
             </div>
           </div>
 

@@ -12,11 +12,13 @@ export const fetchPin = (id) => (
   })
 );
 
-export const createPin = (pin) => (
+export const createPin = (data) => (
   $.ajax({
     method: 'POST',
     url: "/api/pins",
-    data: {pin}
+    data: data,
+    processData: false,
+    contentType: false
   })
 );
 export const updatePin = (pin) => (

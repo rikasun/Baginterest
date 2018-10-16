@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 
 const Nav = ({ currentUser, logout, openModal, history, modal }) => {
+  // let url = currentUser.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-dev/VTcR7xgf9bmBUBogucw5Kt7L";
+  let url = "https://s3-us-west-1.amazonaws.com/bagquest-dev/VTcR7xgf9bmBUBogucw5Kt7L";
   const sessionLinks = () => {
     if (modal === 'signup') {
       return (
@@ -28,8 +30,8 @@ const Nav = ({ currentUser, logout, openModal, history, modal }) => {
       </div>
 
       <div className="user-name">
-      <Link to={`/users/${currentUser.id}`}>profileLink</Link>
-        <div>
+        <Link to={`/users/${currentUser.id}`}>{<img className="nav-profile" src={url} alt="user profile link"/>}</Link>
+        <div className="nav-displayname">
           {currentUser.username||currentUser.email.split("@")[0]}
         </div>
       </div>
