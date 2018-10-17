@@ -19,7 +19,6 @@ class Pin < ApplicationRecord
     end
   end
 
-  validates :author_id, presence: true
   validate :ensure_photo
 
   belongs_to :user,

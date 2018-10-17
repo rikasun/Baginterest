@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = ({ currentUser, logout, openModal, history, modal }) => {
   // let url = currentUser.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-dev/VTcR7xgf9bmBUBogucw5Kt7L";
-  let url = "https://s3-us-west-1.amazonaws.com/bagquest-dev/VTcR7xgf9bmBUBogucw5Kt7L";
+  let url = "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";
   const sessionLinks = () => {
     if (modal === 'signup') {
       return (

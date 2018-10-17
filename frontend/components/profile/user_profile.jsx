@@ -24,7 +24,7 @@ class UserProfile extends React.Component{
   render(){
 
     if (!this.props.user) return "";
-    let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-dev/VTcR7xgf9bmBUBogucw5Kt7L"
+    let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png"
     return (
       <div>
         <div className="profile">

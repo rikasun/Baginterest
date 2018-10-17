@@ -5,7 +5,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pins: Object.values(state.entities.pins)
+    pins: Object.values(state.entities.pins).filter(pin => pin.authorId == ownProps.match.params.id)
   }
 }
 

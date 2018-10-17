@@ -5,11 +5,11 @@ class Pinboard < ApplicationRecord
     primary_key: :id,
     foreign_key: :pin_id,
     class_name: :Pin,
-    dependent: destroy
+    dependent: :destroy
 
   belongs_to :board,
     primary_key: :id,
     foreign_key: :board_id,
     class_name: :Board,
-    dependent: destroy
+    dependent: :destroy
 end

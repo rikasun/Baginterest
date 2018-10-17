@@ -51,7 +51,8 @@
 }
 
 .nav-profile {
-  width: 40px;
+  // padding: 2px;
+  width: 38px;
   height: auto;
 }
 
@@ -72,12 +73,15 @@
 }
 
 .logout-button {
-  padding: 5px;
-  font-size: 12px;
-  border-radius: 3px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 7px;
   cursor: pointer;
+  font-weight: lighter;
+  border: none;
+  color: gray;
  }
+ 
  .logout-button:hover {
-   background-color: pink;
-   box-shadow: 2px gray;
+   background-color: #d6405a12;
  }

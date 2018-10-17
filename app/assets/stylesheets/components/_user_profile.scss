@@ -136,6 +136,14 @@
   margin-top: 8px;
 }
 
+.my-gallery-class {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
 .pin-display {
   display: flex;
   justify-content: flex-start;
@@ -144,9 +152,18 @@
   flex-wrap: wrap;
 }
 
-.single-pin {
+.gallery-item {
   padding: 20px;
   border-radius: 7px;
+  background-clip: padding-box;
+}
+
+.create-pin-box {
+  border-radius: 7px;
+  width: 320px;
+  height: 250px;
+  cursor: pointer;
+  margin-left: -8px;
 }
 
 .pin-photo {
@@ -156,7 +173,7 @@
   border-color: #eee;
 }
 
-.single-pin:hover {
-  background-color: lightgray;
-  opacity: 0.5;
+.gallery-item:hover {
+  background-color: #d3d3d34f;
+  opacity: 0.8;
 }

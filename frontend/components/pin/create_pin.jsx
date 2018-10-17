@@ -68,15 +68,13 @@ class CreatePin extends React.Component {
 
                   <img className="dropzone-preview" src={this.state.photoUrl} />
 
-                <div className="camera"><i className="fas fa-camera"></i></div>
+                </Dropzone>
+                
+          <div className="camera"><i className="fas fa-camera"></i></div>
 
-                    <div className="dropzone-text">
-                  <div>Drag and drop or <br/>click to upload</div>
-                 </div>
-
-
-
-          </Dropzone>
+          <div className="dropzone-text">
+            <div>Drag and drop or <br/>click to upload</div>
+          </div>
 
           </div>
 
