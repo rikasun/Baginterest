@@ -302,3 +302,15 @@ pin51.save!
 # pin.save!
 
 pinboard1 = Pinboard.create!(pin_id: 1, board_id: 1)
+pinboard2 = Pinboard.create!(pin_id: 2, board_id: 1)
+pinboard3 = Pinboard.create!(pin_id: 3, board_id: 1)
+pinboard4 = Pinboard.create!(pin_id: 4, board_id: 1)
+pinboard5 = Pinboard.create!(pin_id: 5, board_id: 1)
+pinboard6 = Pinboard.create!(pin_id: 6, board_id: 1)
+pinboard7 = Pinboard.create!(pin_id: 7, board_id: 1)
+pinboard8 = Pinboard.create!(pin_id: 8, board_id: 1)
+pinboard9 = Pinboard.create!(pin_id: 9, board_id: 1)
+pinboard10 = Pinboard.create!(pin_id: 10, board_id: 1)
+pinboard11 = Pinboard.create!(pin_id: 11, board_id: 1)
+pinboard12 = Pinboard.create!(pin_id: 12, board_id: 1)
+pinboard13 = Pinboard.create!(pin_id: 13, board_id: 1)

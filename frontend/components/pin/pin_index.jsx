@@ -53,9 +53,8 @@ class PinIndex extends React.Component{
                 >Save
               </button>
           </div>
-
           <img className="pin-photo" src={pin.photoUrl}/>
-
+          <div className="overlay"></div>
       </div>
     );
 

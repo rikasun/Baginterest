@@ -5,9 +5,8 @@ import { selectPinsByBoardId } from '../../reducers/selector';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    board: Object.values(state.entities.boards),
+    board: state.entities.boards,
     pins: Object.values(state.entities.pins),
-    user: state.entities.users
   }
 }
 

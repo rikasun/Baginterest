@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
+import BounceLoading from '../spinner';
 
 class Home extends React.Component{
 
   constructor(props) {
     super(props);
     this.state = {
-      boardId: 1
+      boardId: 1,
+      loading:true
     }
+
+    setTimeout(() => this.setState({loading:false}), 2000);
   }
 
 
@@ -57,6 +61,10 @@ class Home extends React.Component{
     let masonryOptions = {
       transitionDuration: 0,
       gutter: 20
+    };
+
+    if (this.state.loading) {
+      return <BounceLoading state={this.state} />
     };
     return (
       <div className="pin-display">

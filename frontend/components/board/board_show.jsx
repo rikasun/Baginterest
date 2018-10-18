@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
+import BounceLoading from '../spinner';
 
 class BoardShow extends React.Component{
 
   constructor(props) {
     super(props);
     this.renderItems = this.renderItems.bind(this);
+    this.state = {loading: true}
+
+    setTimeout(() => this.setState({loading:false}), 2000);
   }
 
 
@@ -23,15 +27,18 @@ class BoardShow extends React.Component{
       gutter: 20
     };
 
-  let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";
+  // let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";
 
-    if (this.props.board[0] === undefined) return "";
+    if (this.props.board === undefined || this.state.loading) {
+      return <BounceLoading state={this.state} />
+    };
+
     return (
       <div>
 
           <div className="board-name-show">
 
-            {this.props.board[0].boardName}
+            {this.props.board.boardName}
           </div>
 
 

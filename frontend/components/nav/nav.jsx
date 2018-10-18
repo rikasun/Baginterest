@@ -29,12 +29,14 @@ const Nav = ({ currentUser, logout, openModal, history, modal }) => {
         <input className="search-bar-content" type="search" placeholder="Search"/>
       </div>
 
-      <div className="user-name">
-        <Link to={`/users/${currentUser.id}`}>{<img className="nav-profile" src={url} alt="user profile link"/>}</Link>
-        <div className="nav-displayname">
-          {currentUser.username||currentUser.email.split("@")[0]}
-        </div>
-      </div>
+
+        <Link className="user-name" to={`/users/${currentUser.id}`}>
+          <img className="nav-profile" src={url} alt="user profile link"/>
+          <div className="nav-displayname">
+            {currentUser.username||currentUser.email.split("@")[0]}
+          </div>
+        </Link>
+
 
       <div className="hamburger">
         <button className="logout-button" onClick={()=>logout().then(() => history.push('/login'))}>Log Out</button>

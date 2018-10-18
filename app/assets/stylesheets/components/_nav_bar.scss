@@ -1,3 +1,8 @@
+.spinner {
+  margin-top: 200px;
+  margin-left: 700px;;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-around;
@@ -48,12 +53,13 @@
   border-radius: 100px;
   padding: 5px;
   display: flex;
+  text-decoration: none;
 }
 
 .nav-profile {
   // padding: 2px;
   width: 38px;
-  height: auto;
+  height: 38px;
 }
 
 .nav-displayname {
@@ -61,6 +67,9 @@
   font-family: inherit;
   font-size: 20px;
   text-transform: capitalize;
+  text-decoration: none;
+  font-weight: lighter;
+  color: gray;
 }
 
 .user-name:hover{
@@ -81,7 +90,7 @@
   border: none;
   color: gray;
  }
- 
+
  .logout-button:hover {
    background-color: #d6405a12;
  }

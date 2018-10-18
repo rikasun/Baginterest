@@ -7,6 +7,7 @@ import {
   RECEIVE_ALL_PINS
 } from '../actions/pin_actions';
 
+import { RECEIVE_BOARDS } from '../actions/board_actions';
 
 
 const pinsReducer = (state={}, action) => {
@@ -16,6 +17,8 @@ const pinsReducer = (state={}, action) => {
       return action.pins;
     case RECEIVE_ALL_PINS:
       return merge({}, state, action.pins);
+    case RECEIVE_BOARDS:
+      return merge({}, state, action.boards.pins);
     case RECEIVE_PIN:
       return merge({}, state, {[action.pin.id]: action.pin})
     case REMOVE_PIN:
