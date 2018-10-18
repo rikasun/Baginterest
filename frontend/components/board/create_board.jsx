@@ -17,7 +17,6 @@ class CreateBoard extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("here")
     let board = {};
     board.board_name = this.state.boardName;
     this.props.createBoard(board).then(this.props.closeModal);

@@ -140,7 +140,16 @@
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
-  margin-left: -30px; /* gutter size offset */
+  margin-left: 45px; /* gutter size offset */
+  width: auto;
+}
+
+.my-gallery-class-home {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -100px; /* gutter size offset */
+  margin-top: 40px;
   width: auto;
 }
 
@@ -156,6 +165,7 @@
   padding: 20px;
   border-radius: 7px;
   background-clip: padding-box;
+  min-width: 300px;
 }
 
 .create-pin-box {
@@ -176,4 +186,46 @@
 .gallery-item:hover {
   background-color: #d3d3d34f;
   opacity: 0.8;
+}
+
+.dropdown-selector{
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  text-align: center;
+  color: #403e3e;
+}
+
+.save-button{
+
+  font-size: 18px;
+  background-color: #d6405a;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-family: sans-serif;
+
+}
+
+div.save-selector {
+  display: none;
+  margin-top: 15px;
+  margin-left: 54px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+// div.save-selector:after{
+//   position: absolute;
+//   content: "";
+//   top: 11px;
+//   right: 64px;
+//   width: 0;
+//   height: 0;
+//   border: 6px solid transparent;
+//   border-color: #fff transparent transparent transparent;
+// }
+
+.gallery-item:hover div.save-selector {
+  display: block;
 }

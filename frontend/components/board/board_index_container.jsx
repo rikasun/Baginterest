@@ -5,7 +5,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    boards: Object.values(state.entities.boards)
+    boards: Object.values(state.entities.boards).filter(board => board.authorId == ownProps.match.params.id)
   }
 }
 

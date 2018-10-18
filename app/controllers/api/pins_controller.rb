@@ -11,8 +11,12 @@ class Api::PinsController < ApplicationController
   end
 
   def index
-    @user = User.find(params[:user_id])
-    @pins = @user.pins
+    @user = User.find_by(id: params[:user_id])
+    if @user
+      @pins = @user.pins
+    else
+      @pins = Pin.all
+    end
   end
 
   def show

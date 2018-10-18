@@ -1,0 +1,25 @@
+.save-pin-modal-background {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+   position: fixed;
+   background-size: cover;
+   background-size: 100% 100%;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 1;
+
+}
+
+.save-pin-modal-child {
+  position: fixed;
+  width: 800px;
+  // max-width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+}

@@ -1,11 +1,16 @@
 import * as PinAPIUtil from '../util/pin_api_util';
 
+export const RECEIVE_ALL_PINS = 'RECEIVE_ALL_PINS';
 export const RECEIVE_PINS = 'RECEIVE_PINS';
 export const RECEIVE_PIN = 'RECEIVE_PIN';
 export const REMOVE_PIN = 'REMOVE_PIN';
 export const RECEIVE_PIN_ERRORS = "RECEIVE_PIN_ERRORS";
 
 
+export const receiveAllPins = pins => ({
+  type: RECEIVE_ALL_PINS,
+  pins
+});
 
 export const receivePins = pins => ({
   type: RECEIVE_PINS,
@@ -27,6 +32,10 @@ export const receivePinErrors = errors => ({
   errors
 });
 
+export const fetchAllPins = () => (dispatch) => {
+  return PinAPIUtil.fetchAllPins()
+  .then(allPins => dispatch(receiveAllPins(allPins)));
+};
 
 export const fetchUserPins = (userId) => (dispatch) => {
   return PinAPIUtil.fetchPins(userId)

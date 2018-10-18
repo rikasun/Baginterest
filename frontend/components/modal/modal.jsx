@@ -61,6 +61,7 @@ class Modal extends React.Component {
             </div>
           );
       break;
+    
       default:
        return component = <SignupFormContainer />;;
     }

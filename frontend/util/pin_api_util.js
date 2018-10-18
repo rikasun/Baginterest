@@ -1,3 +1,10 @@
+export const fetchAllPins = () => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/pins`
+  })
+);
+
 export const fetchPins = (userId) => (
   $.ajax({
     method: 'GET',

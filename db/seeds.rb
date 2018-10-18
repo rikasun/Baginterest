@@ -28,6 +28,12 @@ user6 = User.create!(email: 'andy@gmail.com', age: 266, password: 'andypassword'
 # file = EzDownload.open('')
 # pin.photo.attach(io: file, filename: '')
 # pin.save!
+board1 = Board.create!(board_name: 'Chanel', user: user0)
+board2 = Board.create!(board_name: 'Louis Vuitton', user: user0)
+board3 = Board.create!(board_name: 'Hermes', user: user0)
+board4 = Board.create!(board_name: 'Dior', user: user0)
+board5 = Board.create!(board_name: 'Gabriela Hearst', user: user0)
+
 
 pin1 = Pin.new(user: user0, description: 'chanel-boy-chanel-handbag-silver-python-metallic-lambskin-ruthenium-finish-metal', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Chanel/boy-chanel-handbag-silver-python-metallic-lambskin-ruthenium-finish-metal.jpg')
 file1 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Chanel/boy-chanel-handbag-silver-python-metallic-lambskin-ruthenium-finish-metal.jpg')
@@ -94,94 +100,199 @@ file13 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Chanel
 pin13.photo.attach(io: file13, filename: 'vanity-case-beige-calfskin-gold-tone-metal.jpg')
 pin13.save!
 
-# -----------------------------------------
+# LV-----------------------------------------
 
-# pin14 = Pin.new(description: 'Louis+Vuitton/bento-box-bb-monogram', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/bento-box-bb-monogram.png')
-# file14 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/bento-box-bb-monogram.png')
-# pin14.photo.attach(io: file14, filename: 'bento-box-bb-monogram.png')
-# pin14.save!
+pin14 = Pin.new(user: user0, description: 'Louis+Vuitton/bento-box-bb-monogram', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/bento-box-bb-monogram.png')
+file14 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/bento-box-bb-monogram.png')
+pin14.photo.attach(io: file14, filename: 'bento-box-bb-monogram.png')
+pin14.save!
 
-# pin15 = Pin.new(description: '', url:'')
-# file15 = EzDownload.open('')
-# pin15.photo.attach(io: file15, filename: '')
-# pin15.save!
-#
-# pin16 = Pin.new(description: '', url:'')
-# file16 = EzDownload.open('')
-# pin16.photo.attach(io: file16, filename: '')
-# pin16.save!
-#
-# pin17 = Pin.new(description: '', url:'')
-# file17 = EzDownload.open('')
-# pin17.photo.attach(io: file17, filename: '')
-# pin17.save!
-#
-# pin18 = Pin.new(description: '', url:'')
-# file18 = EzDownload.open('')
-# pin18.photo.attach(io: file18, filename: '')
-# pin18.save!
-#
-# pin19 = Pin.new(description: '', url:'')
-# file19 = EzDownload.open('')
-# pin19.photo.attach(io: file19, filename: '')
-# pin19.save!
-#
-# pin20 = Pin.new(description: '', url:'')
-# file20 = EzDownload.open('')
-# pin20.photo.attach(io: file20, filename: '')
-# pin20.save!
-#
-# pin21 = Pin.new(description: '', url:'')
-# file21 = EzDownload.open('')
-# pin21.photo.attach(io: file21, filename: '')
-# pin21.save!
-#
-# pin22 = Pin.new(description: '', url:'')
-# file22 = EzDownload.open('')
-# pin22.photo.attach(io: file22, filename: '')
-# pin22.save!
-#
-# pin23 = Pin.new(description: '', url:'')
-# file23 = EzDownload.open('')
-# pin23.photo.attach(io: file23, filename: '')
-# pin23.save!
-#
-# pin24 = Pin.new(description: '', url:'')
-# file24 = EzDownload.open('')
-# pin24.photo.attach(io: file24, filename: '')
-# pin24.save!
-#
-# pin = Pin.new(description: '', url:'')
-# file = EzDownload.open('')
-# pin.photo.attach(io: file, filename: '')
-# pin.save!
-#
-# pin = Pin.new(description: '', url:'')
-# file = EzDownload.open('')
-# pin.photo.attach(io: file, filename: '')
-# pin.save!
-#
-# pin = Pin.new(description: '', url:'')
-# file = EzDownload.open('')
-# pin.photo.attach(io: file, filename: '')
-# pin.save!
-#
-# pin = Pin.new(description: '', url:'')
-# file = EzDownload.open('')
-# pin.photo.attach(io: file, filename: '')
-# pin.save!
-#
-# pin = Pin.new(description: '', url:'')
-# file = EzDownload.open('')
-# pin.photo.attach(io: file, filename: '')
-# pin.save!
-#
-# pin = Pin.new(description: '', url:'')
-# file = EzDownload.open('')
-# pin.photo.attach(io: file, filename: '')
-# pin.save!
-#
-# pin = Pin.new(description: '', url:'')
+pin15 = Pin.new(user: user0, description: 'Louis+Vuitton/bleecker-box-monogram', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/bleecker-box-monogram.png')
+file15 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/bleecker-box-monogram.png')
+pin15.photo.attach(io: file15, filename: 'bleecker-box-monogram.png')
+pin15.save!
+
+pin16 = Pin.new(user: user0, description: 'Louis+Vuitton/cannes', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/cannes.png')
+file16 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/cannes.png')
+pin16.photo.attach(io: file16, filename: 'cannes.png')
+pin16.save!
+
+pin17 = Pin.new(user: user0, description: 'Louis+Vuitton/capucines-bb-crocodilien-brillant', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/capucines-bb-crocodilien-brillant.png')
+file17 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/capucines-bb-crocodilien-brillant.png')
+pin17.photo.attach(io: file17, filename: 'capucines-bb-crocodilien-brillant.png')
+pin17.save!
+
+pin18 = Pin.new(user: user0, description: 'Louis+Vuitton/capucines-mini-capucines-nvprod', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/capucines-mini-capucines-nvprod.png')
+file18 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/capucines-mini-capucines-nvprod.png')
+pin18.photo.attach(io: file18, filename: 'capucines-mini-capucines-nvprod.png')
+pin18.save!
+
+pin19 = Pin.new(user: user0, description: 'Louis+Vuitton/horizon-50-monogram', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/horizon-50-monogram.png')
+file19 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/horizon-50-monogram.png')
+pin19.photo.attach(io: file19, filename: 'horizon-50-monogram.png')
+pin19.save!
+
+pin20 = Pin.new(user: user0, description: 'Louis+Vuitton/louis-vuitton-keepall-55', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/louis-vuitton-keepall-55-bandoulie%CC%80re-monogram-eclipse-canvas-travel.png')
+file20 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/louis-vuitton-keepall-55-bandoulie%CC%80re-monogram-eclipse-canvas-travel.png')
+pin20.photo.attach(io: file20, filename: 'louis-vuitton-keepall-55-bandoulie%CC%80re-monogram-eclipse-canvas-travel.png')
+pin20.save!
+
+pin21 = Pin.new(user: user0, description: 'Louis+Vuitton/neverfull-mm-damier-ebene-nvprod', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/neverfull-mm-damier-ebene-nvprod.png')
+file21 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/neverfull-mm-damier-ebene-nvprod.png')
+pin21.photo.attach(io: file21, filename: 'neverfull-mm-damier-ebene-nvprod.png')
+pin21.save!
+
+pin22 = Pin.new(user: user0, description: 'Louis+Vuitton/palm-springs-backpack-mini', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/palm-springs-backpack-mini.png')
+file22 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/palm-springs-backpack-mini.png')
+pin22.photo.attach(io: file22, filename: 'palm-springs-backpack-mini.png')
+pin22.save!
+
+pin23 = Pin.new(user: user0, description: 'Louis+Vuitton/petite-boite-chapeau-ep', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-boite-chapeau-ep.png')
+file23 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-boite-chapeau-ep.png')
+pin23.photo.attach(io: file23, filename: 'petite-boite-chapeau-ep.png')
+pin23.save!
+
+pin24 = Pin.new(user: user0, description: 'Louis+Vuitton/petite-boite-chapeau-monogram', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-boite-chapeau-monogram.png')
+file24 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-boite-chapeau-monogram.png')
+pin24.photo.attach(io: file24, filename: 'petite-boite-chapeau-monogram.png')
+pin24.save!
+
+pin25 = Pin.new(user: user0, description: 'Louis+Vuitton/ruffle-bag-monogram', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/ruffle-bag-monogram.png')
+file25 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/ruffle-bag-monogram.png')
+pin25.photo.attach(io: file25, filename: 'ruffle-bag-monogram.png')
+pin25.save!
+
+pin26 = Pin.new(user: user0, description: 'Louis+Vuitton/venice-patent-leather', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/venice-patent-leather.png')
+file26 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/venice-patent-leather.png')
+pin26.photo.attach(io: file26, filename: 'venice-patent-leather.png')
+pin26.save!
+
+pin27 = Pin.new(user: user0, description: 'Louis+Vuitton/petite-malle-epi', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-malle-epi.png')
+file27 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-malle-epi.png')
+pin27.photo.attach(io: file27, filename: 'petite-malle-epi.png')
+pin27.save!
+
+pin28 = Pin.new(user: user0, description: 'Louis+Vuitton/petite-malle-monogram', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-malle-monogram.png')
+file28 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Louis+Vuitton/petite-malle-monogram.png')
+pin28.photo.attach(io: file28, filename: 'petite-malle-monogram.png')
+pin28.save!
+
+# Hermes-------------------------
+pin29 = Pin.new(user: user0, description: 'Hermes/evelyne-iii-33', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/evelyne-iii-33.jpg')
+file29 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/evelyne-iii-33.jpg')
+pin29.photo.attach(io: file29, filename: 'evelyne-iii-33.jpg')
+pin29.save!
+
+pin30 = Pin.new(user: user0, description: 'Hermes/fortunio-clutch', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/fortunio-clutch.jpg')
+file30 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/fortunio-clutch.jpg')
+pin30.photo.attach(io: file30, filename: 'fortunio-clutch.jpg')
+pin30.save!
+
+pin31 = Pin.new(user: user0, description: 'Hermes/halzan-mini-bag', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/halzan-mini-bag.jpg')
+file31 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/halzan-mini-bag.jpg')
+pin31.photo.attach(io: file31, filename: 'halzan-mini-bag.jpg')
+pin31.save!
+
+pin32 = Pin.new(user: user0, description: 'Hermes/jypsiere-28', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/jypsiere-28.jpg')
+file32 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/jypsiere-28.jpg')
+pin32.photo.attach(io: file32, filename: 'jypsiere-28.jpg')
+pin32.save!
+
+pin33 = Pin.new(user: user0, description: 'Hermes/lindy-30-bag', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/lindy-30-bag.jpg')
+file33 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/lindy-30-bag.jpg')
+pin33.photo.attach(io: file33, filename: 'lindy-30-bag.jpg')
+pin33.save!
+
+pin34 = Pin.new(user: user0, description: 'Hermes/pliplat-clutch', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/pliplat-clutch.jpg')
+file34 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/pliplat-clutch.jpg')
+pin34.photo.attach(io: file34, filename: 'pliplat-clutch.jpg')
+pin34.save!
+
+pin35 = Pin.new(user: user0, description: 'Hermes/toolbox-26', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/toolbox-26.jpg')
+file35 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/toolbox-26.jpg')
+pin35.photo.attach(io: file35, filename: '/toolbox-26.jpg')
+pin35.save!
+
+pin36 = Pin.new(user: user0, description: 'Hermes/verrou-chaine-mini-bag-black', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/verrou-chaine-mini-bag-black.jpg')
+file36 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/verrou-chaine-mini-bag-black.jpg')
+pin36.photo.attach(io: file36, filename: 'verrou-chaine-mini-bag-black.jpg')
+pin36.save!
+
+pin37 = Pin.new(user: user0, description: 'Hermes/verrou-chaine-mini-bag', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/verrou-chaine-mini-bag.jpg')
+file37 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Hermes/verrou-chaine-mini-bag.jpg')
+pin37.photo.attach(io: file37, filename: 'verrou-chaine-mini-bag.jpg')
+pin37.save!
+
+# dior-----------
+
+pin38 = Pin.new(user: user0, description: 'Dior/DIOR-BOOK-TOTE-DIOR-OBLIQUE-BAG', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/DIOR+BOOK+TOTE+DIOR+OBLIQUE+BAG.jpg')
+file38 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/DIOR+BOOK+TOTE+DIOR+OBLIQUE+BAG.jpg')
+pin38.photo.attach(io: file38, filename: 'DIOR+BOOK+TOTE+DIOR+OBLIQUE+BAG.jpg')
+pin38.save!
+
+pin39 = Pin.new(user: user0, description: 'Dior/DIOR-OBLIQUE-SADDLE-BAG', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/DIOR+OBLIQUE+SADDLE+BAG.jpg')
+file39 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/DIOR+OBLIQUE+SADDLE+BAG.jpg')
+pin39.photo.attach(io: file39, filename: 'DIOR+OBLIQUE+SADDLE+BAG.jpg')
+pin39.save!
+
+pin40 = Pin.new(user: user0, description: '/Dior/LADY-DIOR-CALFSKIN-BAG', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/LADY+DIOR+CALFSKIN+BAG.jpg')
+file40 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/LADY+DIOR+CALFSKIN+BAG.jpg')
+pin40.photo.attach(io: file40, filename: 'LADY+DIOR+CALFSKIN+BAG.jpg')
+pin40.save!
+
+pin41 = Pin.new(user: user0, description: 'Dior/MINI-JADIOR-CALFSKIN-BAG', url:"https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/MINI+J'ADIOR+CALFSKIN+BAG.jpg")
+file41 = EzDownload.open("https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/MINI+J'ADIOR+CALFSKIN+BAG.jpg")
+pin41.photo.attach(io: file41, filename: 'MINI+JADIOR+CALFSKIN+BAG.jpg')
+pin41.save!
+
+pin42 = Pin.new(user: user0, description: 'Dior/MINI-LADY-DIOR-SATIN-BAG', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/MINI+LADY+DIOR+SATIN+BAG.jpg')
+file42 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/MINI+LADY+DIOR+SATIN+BAG.jpg')
+pin42.photo.attach(io: file42, filename: 'MINI+LADY+DIOR+SATIN+BAG.jpg')
+pin42.save!
+
+pin43 = Pin.new(user: user0, description: 'Dior/SMALL-DIORAMA-CALFSKIN-BAG', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/SMALL+DIORAMA+CALFSKIN+BAG.jpg')
+file43 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Dior/SMALL+DIORAMA+CALFSKIN+BAG.jpg')
+pin43.photo.attach(io: file43, filename: 'SMALL+DIORAMA+CALFSKIN+BAG.jpg')
+pin43.save!
+
+
+#GH-----
+pin45 = Pin.new(user: user0, description: 'Gabriela+Hearst/ClineBag', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/ClineBag.jpg')
+file45 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/ClineBag.jpg')
+pin45.photo.attach(io: file45, filename: 'ClineBag.jpg')
+pin45.save!
+
+pin46 = Pin.new(user: user0, description: 'Gabriela+Hearst/DemiBag', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/DemiBag.jpg')
+file46 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/DemiBag.jpg')
+pin46.photo.attach(io: file46, filename: 'DemiBag.jpg')
+pin46.save!
+
+pin47 = Pin.new(user: user0, description: 'Gabriela+Hearst/DemiBagSatin', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/DemiBagSatin.jpg')
+file47 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/DemiBagSatin.jpg')
+pin47.photo.attach(io: file47, filename: 'DemiBagSatin.jpg')
+pin47.save!
+
+pin48 = Pin.new(user: user0, description: 'Gabriela+Hearst/DianaBagSnake', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/DianaBagSnake.jpg')
+file48 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/DianaBagSnake.jpg')
+pin48.photo.attach(io: file48, filename: 'DianaBagSnake.jpg')
+pin48.save!
+
+pin49 = Pin.new(user: user0, description: 'Gabriela+Hearst/EllaBag', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/EllaBag.jpg')
+file49 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/EllaBag.jpg')
+pin49.photo.attach(io: file49, filename: 'EllaBag.jpg')
+pin49.save!
+
+pin50 = Pin.new(user: user0, description: 'Gabriela+Hearst/MitchellBagwSnake', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/MitchellBagwSnake.jpg')
+file50 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/MitchellBagwSnake.jpg')
+pin50.photo.attach(io: file50, filename: 'MitchellBagwSnake.jpg')
+pin50.save!
+
+pin51 = Pin.new(user: user0, description: 'Gabriela+Hearst/NinaBag', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/NinaBag.jpg')
+file51 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabriela+Hearst/NinaBag.jpg')
+pin51.photo.attach(io: file51, filename: 'NinaBag.jpg')
+pin51.save!
+
+# pin = Pin.new(user: user0, description: '', url:'')
 # file = EzDownload.open('')
 # pin.photo.attach(io: file, filename: '')
 # pin.save!
