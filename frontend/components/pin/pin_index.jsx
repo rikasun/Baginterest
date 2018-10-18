@@ -7,7 +7,7 @@ class PinIndex extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      boardId: null
+      boardId: 1,
     }
   }
 
@@ -63,6 +63,7 @@ class PinIndex extends React.Component{
   }
 
   render(){
+
     let masonryOptions = {
       transitionDuration: 0,
       gutter: 20

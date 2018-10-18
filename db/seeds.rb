@@ -8,6 +8,7 @@
 User.destroy_all
 Pin.destroy_all
 Board.destroy_all
+Pinboard.destroy_all
 
 user0 = User.create!(email: 'demo@gmail.com', age: 25, password: 'demo25', username: 'demo')
 user1 = User.create!(email: 'alice@gmail.com', age: 25, password: 'alice25', username: 'alice' )
@@ -33,6 +34,9 @@ board2 = Board.create!(board_name: 'Louis Vuitton', user: user0)
 board3 = Board.create!(board_name: 'Hermes', user: user0)
 board4 = Board.create!(board_name: 'Dior', user: user0)
 board5 = Board.create!(board_name: 'Gabriela Hearst', user: user0)
+
+
+
 
 
 pin1 = Pin.new(user: user0, description: 'chanel-boy-chanel-handbag-silver-python-metallic-lambskin-ruthenium-finish-metal', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Chanel/boy-chanel-handbag-silver-python-metallic-lambskin-ruthenium-finish-metal.jpg')
@@ -296,3 +300,5 @@ pin51.save!
 # file = EzDownload.open('')
 # pin.photo.attach(io: file, filename: '')
 # pin.save!
+
+pinboard1 = Pinboard.create!(pin_id: 1, board_id: 1)

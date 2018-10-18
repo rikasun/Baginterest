@@ -23,8 +23,13 @@ class BoardIndex extends React.Component{
             <div className="create-board-text">Create board</div>
           </div>
           {this.props.boards.map(board =>
-            <div className="single-board">
-              <div className="board-preview"></div>
+            <div>
+              <Link to={`/boards/${board.id}`}>
+                <div
+                  className="single-board">
+                  <div className="board-preview"></div>
+                </div>
+              </Link>
               <div className="board-name">{board.boardName}</div>
             </div>
           )}

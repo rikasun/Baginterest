@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 import BoardIndex from './board_index';
 import { fetchUserBoards } from '../../actions/board_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { selectPinsByBoardId } from '../../reducers/selector';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    boards: Object.values(state.entities.boards).filter(board => board.authorId == ownProps.match.params.id)
+    boards: Object.values(state.entities.boards).filter(board => board.authorId == ownProps.match.params.id),
+    pinsOnBoard: selectPinsByBoardId(state)
   }
 }
 

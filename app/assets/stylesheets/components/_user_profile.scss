@@ -132,8 +132,9 @@
   font-family: sans-serif;
   color: #808080b5;
   font-weight: 600;
-  margin-left: 1px;
-  margin-top: 8px;
+  margin-left: 19px;
+    margin-top: -28px;
+  text-decoration: none;
 }
 
 .my-gallery-class {
@@ -150,7 +151,7 @@
   display: flex;
   margin-left: -100px; /* gutter size offset */
   margin-top: 40px;
-  width: auto;
+    width: auto;
 }
 
 .pin-display {
@@ -165,7 +166,7 @@
   padding: 20px;
   border-radius: 7px;
   background-clip: padding-box;
-  min-width: 300px;
+  // min-width: 300px;
 }
 
 .create-pin-box {
@@ -177,7 +178,7 @@
 }
 
 .pin-photo {
-  width: 300px;
+  width: 100%;
   height: auto;
   border-radius: 7px;
   border-color: #eee;
@@ -228,4 +229,12 @@ div.save-selector {
 
 .gallery-item:hover div.save-selector {
   display: block;
+}
+
+.board-name-show {
+  font-size: 31px;
+    font-family: sans-serif;
+    color: dimgray;
+    padding-top: 60px;
+    text-align: center;
 }

@@ -14,6 +14,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import UserProfileContainer from './profile/user_profile_container';
 import BoardIndexContainer from './board/board_index_container';
+import BoardShowContainer from './board/board_show_container';
 import HomeContainer from './home/home_container';
 import { AuthRoute, ProtectedRoute, RedirectIfLoggedOut } from '../util/route_util';
 
@@ -31,6 +32,7 @@ const App = ({store}) => (
 
       <ProtectedRoute exact path="/" component={HomeContainer} />
 
+      <Route path="/boards/:id" component={BoardShowContainer} />
       <Redirect to="/" />
     </Switch>
   </div>
