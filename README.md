@@ -69,12 +69,12 @@ break;
 
 ### Dropzone
 
-![](dropzone.gif)
+![](Dropzone.gif)
 
 Using `npm dropzone packdge` to upload/drag photo to rails active storage.
 
 ### Masonry
 
-![](masonry.gif)
+![](Masonry.gif)
 
 Using `npm masonry package` to seamlessly render photos that come in different dimensions.
