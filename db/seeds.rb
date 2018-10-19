@@ -321,11 +321,11 @@ pin56.photo.attach(io: file56, filename: 'MINI+BELT+BAG+IN+GRAINED+CALFSKIN.jpg'
 pin56.save!
 
 # cult gaia---------------------------------
-
-pin57 = Pin.new(user: user0, description: 'Cult+Gaia/Acrylic+Luna+-+Malachite', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
-file57 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
-pin57.photo.attach(io: file57, filename: 'Acrylic+Luna+-+Malachite.jpg')
-pin57.save!
+#
+# pin57 = Pin.new(user: user0, description: 'Cult+Gaia/Acrylic+Luna+-+Malachite', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
+# file57 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
+# pin57.photo.attach(io: file57, filename: 'Acrylic+Luna+-+Malachite.jpg')
+# pin57.save!
 
 pin58 = Pin.new(user: user0, description: 'Cult+Gaia/Acrylic+Luna+-+Malachite', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
 file58 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
@@ -480,7 +480,7 @@ pinboard55 = Pinboard.create!(pin_id: pin55.id, board_id: board6.id)
 pinboard56 = Pinboard.create!(pin_id: pin56.id, board_id: board6.id)
 
 
-pinboard57 = Pinboard.create!(pin_id: pin57.id, board_id: board7.id)
+# pinboard57 = Pinboard.create!(pin_id: pin57.id, board_id: board7.id)
 pinboard58 = Pinboard.create!(pin_id: pin58.id, board_id: board7.id)
 pinboard59 = Pinboard.create!(pin_id: pin59.id, board_id: board7.id)
 pinboard60 = Pinboard.create!(pin_id: pin60.id, board_id: board7.id)
