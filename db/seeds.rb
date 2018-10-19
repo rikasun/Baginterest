@@ -18,13 +18,6 @@ user4 = User.create!(email: 'danny@gmail.com', age: 27, password: 'danny27', use
 user5 = User.create!(email: 'eric@gmail.com', age: 31, password: 'eric31', username: 'eric')
 user6 = User.create!(email: 'andy@gmail.com', age: 266, password: 'andypassword', username: 'Andy')
 
-
-# board1 = User.first.boards.create(board_name: 'test1')
-# board1.pins.create!(user: User.first, description: 'pin1')
-# board1.pins.create!(user: User.first, description: 'pin2')
-# board2 = User.first.boards.create(board_name: 'test2')
-# board2.pins.create!(user: User.first, description: 'pin3')
-
 # pin = Pin.new(description: '', url:'')
 # file = EzDownload.open('')
 # pin.photo.attach(io: file, filename: '')
@@ -34,6 +27,10 @@ board2 = Board.create!(board_name: 'Louis Vuitton', user: user0)
 board3 = Board.create!(board_name: 'Hermes', user: user0)
 board4 = Board.create!(board_name: 'Dior', user: user0)
 board5 = Board.create!(board_name: 'Gabriela Hearst', user: user0)
+board6 = Board.create!(board_name: 'Celine', user: user0)
+board7 = Board.create!(board_name: 'Cult Gaia', user: user0)
+board8 = Board.create!(board_name: 'Balenciaga', user: user0)
+board9 = Board.create!(board_name: 'Fendi', user: user0)
 
 
 
@@ -296,10 +293,125 @@ file51 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Gabrie
 pin51.photo.attach(io: file51, filename: 'NinaBag.jpg')
 pin51.save!
 
-# pin = Pin.new(user: user0, description: '', url:'')
-# file = EzDownload.open('')
-# pin.photo.attach(io: file, filename: '')
-# pin.save!
+# Celine -----------------------------------
+
+pin52 = Pin.new(user: user0, description: 'Celine/MEDIUM-BIG-BAG-IN-SUPPLE-GRAINED-CALFSKIN', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MEDIUM+BIG+BAG+IN+SUPPLE+GRAINED+CALFSKIN.jpg')
+file52 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MEDIUM+BIG+BAG+IN+SUPPLE+GRAINED+CALFSKIN.jpg')
+pin52.photo.attach(io: file52, filename: 'MEDIUM+BIG+BAG+IN+SUPPLE+GRAINED+CALFSKIN.jpg')
+pin52.save!
+
+pin53 = Pin.new(user: user0, description: 'Celine/MEDIUM-CLASSIC-BAG+IN-LIZARD-GREEN', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MEDIUM+CLASSIC+BAG+IN+LIZARD+GREEN.jpg')
+file53 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MEDIUM+CLASSIC+BAG+IN+LIZARD+GREEN.jpg')
+pin53.photo.attach(io: file53, filename: 'MEDIUM+CLASSIC+BAG+IN+LIZARD+GREEN.jpg')
+pin53.save!
+
+pin54 = Pin.new(user: user0, description: 'Celine/MEDIUM-CLASSIC-BAG-IN-LIZARD', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MEDIUM+CLASSIC+BAG+IN+LIZARD.jpg')
+file54 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MEDIUM+CLASSIC+BAG+IN+LIZARD.jpg')
+pin54.photo.attach(io: file54, filename: 'MEDIUM+CLASSIC+BAG+IN+LIZARD.jpg')
+pin54.save!
+
+pin55 = Pin.new(user: user0, description: 'Celine/MICRO-LUGGAGE-HANDBAG-IN+DRUMMED-CALFSKIN', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MICRO+LUGGAGE+HANDBAG+IN+DRUMMED+CALFSKIN.jpg')
+file55 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MICRO+LUGGAGE+HANDBAG+IN+DRUMMED+CALFSKIN.jpg')
+pin55.photo.attach(io: file55, filename: 'MICRO+LUGGAGE+HANDBAG+IN+DRUMMED+CALFSKIN.jpg')
+pin55.save!
+
+pin56 = Pin.new(user: user0, description: 'Celine/MINI-BELT-BAG-IN-GRAINED-CALFSKIN', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MINI+BELT+BAG+IN+GRAINED+CALFSKIN.jpg')
+file56 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Celine/MINI+BELT+BAG+IN+GRAINED+CALFSKIN.jpg')
+pin56.photo.attach(io: file56, filename: 'MINI+BELT+BAG+IN+GRAINED+CALFSKIN.jpg')
+pin56.save!
+
+# cult gaia---------------------------------
+
+pin57 = Pin.new(user: user0, description: 'Cult+Gaia/Acrylic+Luna+-+Malachite', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
+file57 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
+pin57.photo.attach(io: file57, filename: 'Acrylic+Luna+-+Malachite.jpg')
+pin57.save!
+
+pin58 = Pin.new(user: user0, description: 'Cult+Gaia/Acrylic+Luna+-+Malachite', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
+file58 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Acrylic+Luna+-+Malachite.jpg')
+pin58.photo.attach(io: file58, filename: 'Acrylic+Luna+-+Malachite.jpg')
+pin58.save!
+
+pin59 = Pin.new(user: user0, description: 'Cult+Gaia/Cupola+Bag+-+Natural', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Cupola+Bag+-+Natural.jpg')
+file59 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Cupola+Bag+-+Natural.jpg')
+pin59.photo.attach(io: file59, filename: 'Cupola+Bag+-+Natural.jpg')
+pin59.save!
+
+pin60 = Pin.new(user: user0, description: 'Cult+Gaia/Gaia+Ark+-+Multi', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Gaia+Ark+-+Multi.jpg')
+file60 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Gaia+Ark+-+Multi.jpg')
+pin60.photo.attach(io: file60, filename: 'Gaia+Ark+-+Multi.jpg')
+pin60.save!
+
+pin61 = Pin.new(user: user0, description: 'Cult+Gaia/Gold+Lilleth', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Gold+Lilleth.jpg')
+file61 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Gold+Lilleth.jpg')
+pin61.photo.attach(io: file61, filename: 'Gold+Lilleth.jpg')
+pin61.save!
+
+pin62 = Pin.new(user: user0, description: 'Cult+Gaia/Zaha+Bag+-+Natural', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Zaha+Bag+-+Natural.jpg')
+file62 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Cult+Gaia/Zaha+Bag+-+Natural.jpg')
+pin62.photo.attach(io: file62, filename: 'Zaha+Bag+-+Natural.jpg')
+pin62.save!
+
+# balenciaga---------
+
+pin63 = Pin.new(user: user0, description: 'Balenciaga/PUPPY-AND-KITTEN-MARKET-SHOPPER-M', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/PUPPY+AND+KITTEN+MARKET+SHOPPER+M.jpg')
+file63 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/PUPPY+AND+KITTEN+MARKET+SHOPPER+M.jpg')
+pin63.photo.attach(io: file63, filename: 'PUPPY+AND+KITTEN+MARKET+SHOPPER+M.jpg')
+pin63.save!
+
+pin64 = Pin.new(user: user0, description: 'Balenciaga/SMALL-JACQUARD-LOGO-BELT-BAG', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/SMALL+JACQUARD+LOGO+BELT+BAG.jpg')
+file64 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/SMALL+JACQUARD+LOGO+BELT+BAG.jpg')
+pin64.photo.attach(io: file64, filename: 'SMALL+JACQUARD+LOGO+BELT+BAG.jpg')
+pin64.save!
+
+pin65 = Pin.new(user: user0, description: 'Balenciaga/TRIANGLE+DUFFLE+M', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/TRIANGLE+DUFFLE+M.jpg')
+file65 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/TRIANGLE+DUFFLE+M.jpg')
+pin65.photo.attach(io: file65, filename: 'TRIANGLE+DUFFLE+M.jpg')
+pin65.save!
+
+pin66 = Pin.new(user: user0, description: 'Balenciaga/TRIANGLE+POUCH+M+GLITTER', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/TRIANGLE+POUCH+M+GLITTER.jpg')
+file66 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/TRIANGLE+POUCH+M+GLITTER.jpg')
+pin66.photo.attach(io: file66, filename: 'TRIANGLE+POUCH+M+GLITTER.jpg')
+pin66.save!
+
+pin67 = Pin.new(user: user0, description: 'Balenciaga/VILLE+GRAFFITI+TOP+HANDLE+S', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/VILLE+GRAFFITI+TOP+HANDLE+S+.jpg')
+file67 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Balenciaga/VILLE+GRAFFITI+TOP+HANDLE+S+.jpg')
+pin67.photo.attach(io: file67, filename: 'VILLE+GRAFFITI+TOP+HANDLE+S+.jpg')
+pin67.save!
+
+# Fendi----------------
+
+pin67 = Pin.new(user: user0, description: 'Fendi/KAN+I+BLUE', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/KAN+I+BLUE.jpeg')
+file67 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/KAN+I+BLUE.jpeg')
+pin67.photo.attach(io: file67, filename: 'KAN+I+BLUE.jpeg')
+pin67.save!
+
+pin68 = Pin.new(user: user0, description: 'Fendi/KAN+I+LOGO', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/KAN+I+LOGO.jpeg')
+file68 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/KAN+I+LOGO.jpeg')
+pin68.photo.attach(io: file68, filename: 'KAN+I+LOGO.jpeg')
+pin68.save!
+
+pin69 = Pin.new(user: user0, description: 'Fendi/KAN+I', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/KAN+I.jpeg')
+file69 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/KAN+I.jpeg')
+pin69.photo.attach(io: file69, filename: 'KAN+I.jpeg')
+pin69.save!
+
+pin70 = Pin.new(user: user0, description: 'Fendi/MON+TRESOR', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/MON+TRESOR.jpeg')
+file70 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/MON+TRESOR.jpeg')
+pin70.photo.attach(io: file70, filename: 'MON+TRESOR.jpeg')
+pin70.save!
+
+pin71 = Pin.new(user: user0, description: 'Fendi/PEEKABOO+REGULAR+black', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/PEEKABOO+REGULAR+black.jpeg')
+file71 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/PEEKABOO+REGULAR+black.jpeg')
+pin71.photo.attach(io: file71, filename: 'PEEKABOO+REGULAR+black.jpeg')
+pin71.save!
+
+pin72 = Pin.new(user: user0, description: 'Fendi/PEEKABOO+REGULAR', url:'https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/PEEKABOO+REGULAR.jpeg')
+file72 = EzDownload.open('https://s3-us-west-1.amazonaws.com/bagquest-pro/Fendi/PEEKABOO+REGULAR.jpeg')
+pin72.photo.attach(io: file72, filename: 'PEEKABOO+REGULAR.jpeg')
+pin72.save!
+
+
 
 pinboard1 = Pinboard.create!(pin_id: 1, board_id: 1)
 pinboard2 = Pinboard.create!(pin_id: 2, board_id: 1)
@@ -314,3 +426,76 @@ pinboard10 = Pinboard.create!(pin_id: 10, board_id: 1)
 pinboard11 = Pinboard.create!(pin_id: 11, board_id: 1)
 pinboard12 = Pinboard.create!(pin_id: 12, board_id: 1)
 pinboard13 = Pinboard.create!(pin_id: 13, board_id: 1)
+
+
+pinboard14 = Pinboard.create!(pin_id: 14, board_id: 2)
+pinboard15 = Pinboard.create!(pin_id: 15, board_id: 2)
+pinboard16 = Pinboard.create!(pin_id: 16, board_id: 2)
+pinboard17 = Pinboard.create!(pin_id: 17, board_id: 2)
+pinboard18 = Pinboard.create!(pin_id: 18, board_id: 2)
+pinboard19 = Pinboard.create!(pin_id: 19, board_id: 2)
+pinboard20 = Pinboard.create!(pin_id: 20, board_id: 2)
+pinboard21 = Pinboard.create!(pin_id: 21, board_id: 2)
+pinboard22 = Pinboard.create!(pin_id: 22, board_id: 2)
+pinboard23 = Pinboard.create!(pin_id: 23, board_id: 2)
+pinboard24 = Pinboard.create!(pin_id: 24, board_id: 2)
+pinboard25 = Pinboard.create!(pin_id: 25, board_id: 2)
+pinboard26 = Pinboard.create!(pin_id: 26, board_id: 2)
+pinboard27 = Pinboard.create!(pin_id: 27, board_id: 2)
+pinboard28 = Pinboard.create!(pin_id: 28, board_id: 2)
+
+pinboard29 = Pinboard.create!(pin_id: 29, board_id: 3)
+pinboard30 = Pinboard.create!(pin_id: 30, board_id: 3)
+pinboard31 = Pinboard.create!(pin_id: 31, board_id: 3)
+pinboard32 = Pinboard.create!(pin_id: 32, board_id: 3)
+pinboard33 = Pinboard.create!(pin_id: 33, board_id: 3)
+pinboard34 = Pinboard.create!(pin_id: 34, board_id: 3)
+pinboard35 = Pinboard.create!(pin_id: 35, board_id: 3)
+pinboard36 = Pinboard.create!(pin_id: 36, board_id: 3)
+pinboard37 = Pinboard.create!(pin_id: 37, board_id: 3)
+
+
+pinboard38 = Pinboard.create!(pin_id: 38, board_id: 4)
+pinboard39 = Pinboard.create!(pin_id: 39, board_id: 4)
+pinboard40 = Pinboard.create!(pin_id: 40, board_id: 4)
+pinboard41 = Pinboard.create!(pin_id: 41, board_id: 4)
+pinboard42 = Pinboard.create!(pin_id: 42, board_id: 4)
+pinboard43 = Pinboard.create!(pin_id: 43, board_id: 4)
+
+
+pinboard44 = Pinboard.create!(pin_id: 44, board_id: 5)
+pinboard45 = Pinboard.create!(pin_id: 45, board_id: 5)
+pinboard46 = Pinboard.create!(pin_id: 46, board_id: 5)
+pinboard47 = Pinboard.create!(pin_id: 47, board_id: 5)
+pinboard48 = Pinboard.create!(pin_id: 48, board_id: 5)
+pinboard49 = Pinboard.create!(pin_id: 49, board_id: 5)
+pinboard50 = Pinboard.create!(pin_id: 50, board_id: 5)
+pinboard51 = Pinboard.create!(pin_id: 51, board_id: 5)
+
+
+pinboard52 = Pinboard.create!(pin_id: 52, board_id: 6)
+pinboard53 = Pinboard.create!(pin_id: 53, board_id: 6)
+pinboard54 = Pinboard.create!(pin_id: 54, board_id: 6)
+pinboard55 = Pinboard.create!(pin_id: 55, board_id: 6)
+pinboard56 = Pinboard.create!(pin_id: 56, board_id: 6)
+
+
+pinboard57 = Pinboard.create!(pin_id: 57, board_id: 7)
+pinboard58 = Pinboard.create!(pin_id: 58, board_id: 7)
+pinboard59 = Pinboard.create!(pin_id: 59, board_id: 7)
+pinboard60 = Pinboard.create!(pin_id: 60, board_id: 7)
+pinboard61 = Pinboard.create!(pin_id: 61, board_id: 7)
+pinboard62 = Pinboard.create!(pin_id: 62, board_id: 7)
+
+
+pinboard63 = Pinboard.create!(pin_id: 63, board_id: 8)
+pinboard64 = Pinboard.create!(pin_id: 64, board_id: 8)
+pinboard65 = Pinboard.create!(pin_id: 65, board_id: 8)
+pinboard66 = Pinboard.create!(pin_id: 66, board_id: 8)
+pinboard67 = Pinboard.create!(pin_id: 67, board_id: 8)
+
+pinboard68 = Pinboard.create!(pin_id: 68, board_id: 9)
+pinboard69 = Pinboard.create!(pin_id: 69, board_id: 9)
+pinboard70 = Pinboard.create!(pin_id: 70, board_id: 9)
+pinboard71 = Pinboard.create!(pin_id: 71, board_id: 9)
+pinboard72 = Pinboard.create!(pin_id: 72, board_id: 9)

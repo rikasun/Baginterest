@@ -15,6 +15,10 @@ class CreateBoard extends React.Component {
     });
   }
 
+  componentDidMount(){
+    this.props.fetchUserBoards(this.props.match.params.id);
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     let board = {};

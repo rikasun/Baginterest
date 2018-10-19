@@ -18,6 +18,7 @@ class BoardIndex extends React.Component{
 
   renderPins(board) {
     let {pins} = this.props
+    if (board.pins) 
     return (
       <div className="board-preview">
         {board.pins.slice(0, 6).map(pinId => <img src={pins.find(pin => pin.id === pinId).photoUrl}/>)}

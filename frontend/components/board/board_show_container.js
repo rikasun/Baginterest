@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BoardShow from './board_show';
-import { fetchAllBoards, fetchBoard } from '../../actions/board_actions';
+import { fetchAllBoards, fetchBoardShow } from '../../actions/board_actions';
 import { selectPinsByBoardId } from '../../reducers/selector';
 
 const mapStateToProps = (state, ownProps) => {
@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchBoard: (id) => dispatch(fetchBoard(id)),
+  fetchBoard: (id) => dispatch(fetchBoardShow(id)),
 
 })
 
