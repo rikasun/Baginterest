@@ -5,3 +5,10 @@ export const createPinBoard = (pinboard) => (
     data: {pinboard:  {board_id: pinboard.boardId, pin_id: pinboard.pinId}}
   })
 );
+
+export const deletePinBoard = (id) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/pinboards/${id}`,
+  })
+);

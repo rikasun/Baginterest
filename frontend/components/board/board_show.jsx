@@ -42,9 +42,6 @@ class BoardShow extends React.Component{
           </div>
 
 
-
-
-
         <div className="pin-display">
           <Masonry
               breakpointCols={4}
@@ -60,11 +57,20 @@ class BoardShow extends React.Component{
 
   renderItems() {
     if (this.props.pins === undefined) return '';
+    //  debugger
     let pins = this.props.pins.map(pin =>
       <div className="gallery-item">
+      
+          <button
+            // onClick={() => this.props.deletePinFromBoard(id)}
+            className="delete-button"
+            >Delete
+              </button>
+
         <img className="pin-photo" src={pin.photoUrl}/>
       </div>
     );
+    console.log(this.props.pinBoard)
 
     return pins;
   }

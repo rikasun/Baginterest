@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import BounceLoading from '../spinner';
+import CreateBoard from '../board/create_board';
 
 class Home extends React.Component{
 
@@ -35,8 +36,10 @@ class Home extends React.Component{
             <select
               className="dropdown-selector"
               onChange={this.update('boardId')}>
-              {this.props.boards.map(board=>
+              {/* <CreateBoard /> */}
+              {this.props.boards.map((board, idx)=>
                 (<option
+                  key={idx}
                   value={board.id}>
                   {board.boardName}
                 </option>))}

@@ -5,7 +5,7 @@ import { fetchAllBoards, fetchBoard } from '../../actions/board_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    board: Object.values(state.entities.boards[ownProps.match.params.id),
+    board: Object.values(state.entities.boards[ownProps.match.params.id]),
     pins: Object.values(state.entities.pins),
   }
 }

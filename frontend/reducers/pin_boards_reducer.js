@@ -1,7 +1,10 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_PINBOARD } from '../actions/pinboard_actions';
-import { RECEIVE_PINBOARDS } from '../actions/pinboard_actions';
+import { RECEIVE_PINBOARD,
+         RECEIVE_PINBOARDS,
+         REMOVE_PINBOARD
+       } from '../actions/pinboard_actions';
+
 
 
 
@@ -12,6 +15,10 @@ const pinBoardsReducer = (state={}, action) => {
       return merge({}, state, {[action.pinBoard.id]: action.pinBoard});
     case RECEIVE_PINBOARDS:
       return action.pinBoards;
+    case REMOVE_PINBOARD:
+      let newState = merge({}, state)
+      delete newState[action.pinBoard.id]
+      return newState;
     default:
       return state;
   }

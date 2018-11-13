@@ -26,7 +26,22 @@ class SessionForm extends React.Component {
 
   handleDemoSubmit(e) {
     e.preventDefault();
-    this.props.processForm({ email:'demo@gmail.com', password:'demo25'}).then(this.props.closeModal);
+    let password = "demo25";
+    const demoLoginEffect = () => {
+      setTimeout(() => {
+        if (password.length > 0) {
+          this.setState({
+            email: "demo@gmail.com",
+            password: this.state.password.concat(password[0])
+          });
+          password = password.slice(1);
+          demoLoginEffect();
+        } else {
+          this.props.processForm(this.state).then(this.props.closeModal);
+        }
+      }, 125);
+    };
+    demoLoginEffect();
   }
 
   renderErrors() {

@@ -64,11 +64,11 @@
 
 .nav-displayname {
   padding: 10px;
-  font-family: inherit;
+  font-family: sans-serif;
   font-size: 20px;
   text-transform: capitalize;
   text-decoration: none;
-  font-weight: lighter;
+  // font-weight: lighter;
   color: gray;
 }
 
@@ -83,10 +83,10 @@
 
 .logout-button {
   padding: 8px;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 7px;
   cursor: pointer;
-  font-weight: lighter;
+  // font-weight: lighter;
   border: none;
   color: gray;
  }

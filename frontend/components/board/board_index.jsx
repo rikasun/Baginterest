@@ -43,8 +43,11 @@ class BoardIndex extends React.Component{
                     className="single-board">
                     {this.renderPins(board)}
                   </div>
-                </Link>
+              
                 <div className="board-name">{board.boardName}</div>
+                </Link>
+                <div onClick={()=>this.props.openModal("editBoard")}><i class="far fa-edit"></i></div>
+
               </div>
             )
           }
