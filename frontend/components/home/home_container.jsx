@@ -3,6 +3,7 @@ import Home from './home';
 import { fetchAllPins } from '../../actions/pin_actions';
 import { fetchUserBoards } from '../../actions/board_actions';
 import { createPinBoard } from '../../actions/pinboard_actions';
+import { createBoard } from "../../actions/board_actions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -15,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   fetchAllPins: () => dispatch(fetchAllPins()),
   fetchUserBoards: (currentuserId) => dispatch(fetchUserBoards(currentuserId)),
-  addPinToBoard: (boardId, pinId) => dispatch(createPinBoard({boardId,pinId}))
+  addPinToBoard: (boardId, pinId) => dispatch(createPinBoard({boardId,pinId})),
+  createBoard: (board) => dispatch(createBoard(board)),
 })
 
 

@@ -62,7 +62,7 @@ class BoardShow extends React.Component{
       <div className="gallery-item">
       
           <button
-            // onClick={() => this.props.deletePinFromBoard(id)}
+          // onClick={() => this.props.deletePinFromBoard(ownProps.match.params.pinId)}
             className="delete-button"
             >Delete
               </button>

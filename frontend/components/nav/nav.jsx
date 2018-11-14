@@ -30,9 +30,9 @@ const Nav = ({ currentUser, logout, openModal, history, modal }) => {
       <div className="search-bar">
         <i className="fas fa-search fa-search-icon" />
         
-        <SearchBar openModal={openModal} closeModal={closeModal} />
+        {/* <SearchBar openModal={openModal} closeModal={closeModal} /> */}
       
-        {/* <input className="search-bar-content" type="search" placeholder="Search" /> */}
+        <input className="search-bar-content" type="search" placeholder="Search" />
       </div>
 
       <Link className="user-name" to={`/users/${currentUser.id}`}>

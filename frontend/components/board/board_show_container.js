@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchBoard: (id) => dispatch(fetchBoardShow(id)),
-  // deletePinFromBoard: (id) => dispatch(deletePinBoard(ownProps.match.params.pinId))
+  deletePinFromBoard: (id) => dispatch(deletePinBoard(id))
 })
 
 
