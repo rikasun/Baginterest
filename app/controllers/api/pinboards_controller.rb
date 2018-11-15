@@ -7,6 +7,18 @@ class Api::PinboardsController < ApplicationController
       render json: @pinboard.errors.full_messages, status: 422
     end
   end
+  
+
+  def destroy
+
+     @pinboard = Pinboard.find(params[:id])
+    if @pinboard
+      @pinboard.destroy
+      render :show
+    else
+      render json: @pinboard.errors.full_messages, status: 401
+    end
+  end 
 
 
   def pinboard_params

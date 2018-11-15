@@ -22,5 +22,6 @@ class Board < ApplicationRecord
 
   has_many :pins,
     through: :pinboards,
-    source: :pin
+    source: :pin,
+    dependent: :destroy
 end

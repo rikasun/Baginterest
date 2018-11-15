@@ -41,7 +41,7 @@ class Api::PinsController < ApplicationController
     @pin = current_user.pins.find(params[:id])
     if @pin
       @pin.destroy
-      render :sow
+      render :show
     else
       render json: @pin.errors.full_messages, status: 401
     end

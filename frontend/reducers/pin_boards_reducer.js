@@ -16,8 +16,16 @@ const pinBoardsReducer = (state={}, action) => {
     case RECEIVE_PINBOARDS:
       return action.pinBoards;
     case REMOVE_PINBOARD:
-      let newState = merge({}, state)
-      delete newState[action.pinBoard.id]
+    let newState = merge({}, state)
+    // delete newState[action.pinBoard.id]
+      let delKey = null;
+      Object.keys(newState).forEach(key => {
+        if(newState[key].pinId === action.pinBoard.id) {
+          delKey = key;
+        }
+      })
+      delete newState[delKey];
+
       return newState;
     default:
       return state;

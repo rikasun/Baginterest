@@ -1,3 +1,10 @@
+export const fetchPinBoards = () => (
+  $.ajax({
+    method: 'GET',
+    url: "/api/pinboards",
+  })
+);
+
 export const createPinBoard = (pinboard) => (
   $.ajax({
     method: 'POST',

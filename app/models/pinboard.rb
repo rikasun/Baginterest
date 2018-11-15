@@ -4,12 +4,12 @@ class Pinboard < ApplicationRecord
   belongs_to :pin,
     primary_key: :id,
     foreign_key: :pin_id,
-    class_name: :Pin,
-    dependent: :destroy
+    class_name: :Pin
+    
 
   belongs_to :board,
     primary_key: :id,
     foreign_key: :board_id,
-    class_name: :Board,
-    dependent: :destroy
-end
+    class_name: :Board
+   
+end 

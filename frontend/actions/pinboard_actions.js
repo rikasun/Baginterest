@@ -19,6 +19,16 @@ export const removePinboard = pinBoard => ({
   pinBoard
 });
 
+
+export const fetchPinBoards = () => (dispatch) => {
+
+  return PinboardAPIUtil.fetchPinBoards().then(
+    res => {
+      return dispatch(receivePinboards(res))
+    }
+  );
+};
+
 export const createPinBoard = (pinBoard) => (dispatch) => {
   return PinboardAPIUtil.createPinBoard(pinBoard).then(
     response => {
@@ -26,9 +36,10 @@ export const createPinBoard = (pinBoard) => (dispatch) => {
   );
 };
 
-export const deletePinBoard = (pinBoard) => (dispatch) => {
-  return PinboardAPIUtil.deletePinBoard(pinBoard).then(
+export const deletePinBoard = (id) => (dispatch) => {
+  return PinboardAPIUtil.deletePinBoard(id).then(
     response => {
+      debugger
       return dispatch(removePinboard(response));}
   );
 };
