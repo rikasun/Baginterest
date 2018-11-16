@@ -8,13 +8,12 @@ const mapStateToProps = (state, ownProps) => {
   return {
     board: state.entities.boards,
     pins: Object.values(state.entities.pins),
-    pinBoards: Object.values(state.entities.pinBoards)
+    pinBoards: state.entities.pinBoards
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchBoard: (id) => dispatch(fetchBoardShow(id)),
-  fetchPinBoards: () => dispatch(fetchPinBoards()),
   deletePinFromBoard: (id) => dispatch(deletePinBoard(id))
 })
 

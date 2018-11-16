@@ -30,3 +30,21 @@
   border-radius: 7px;
   border-color: #eee;
 }
+
+.delete-button {
+  display: none;
+  font-size: 16px;
+  background-color: #d6405a;
+  color: white;
+  padding: 4px;
+  font-family: sans-serif;
+  border-radius: 5px;
+  // margin-left: 90px;
+  // margin-right: -200px;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.gallery-item:hover .delete-button {
+  display: block;
+}

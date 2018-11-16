@@ -10,7 +10,7 @@ Pin.destroy_all
 Board.destroy_all
 Pinboard.destroy_all
 
-user0 = User.create!(email: 'demo@gmail.com', age: 25, password: 'demo25', username: 'demo')
+user0 = User.create!(email: 'demo@gmail.com', age: 25, password: 'demo25555555555', username: 'demo')
 user1 = User.create!(email: 'alice@gmail.com', age: 25, password: 'alice25', username: 'alice' )
 user2 = User.create!(email: 'bob@gmail.com', age: 100, password: 'bob100', username: 'bob' )
 user3 = User.create!(email: 'carly@gmail.com', age: 26, password: 'carly26', username: 'carly')

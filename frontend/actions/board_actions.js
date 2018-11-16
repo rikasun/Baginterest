@@ -54,6 +54,7 @@ export const fetchBoard = (id) => (dispatch) => {
 export const fetchBoardShow = (id) => (dispatch) => {
   return BoardAPIUtil.fetchBoard(id)
   .then(response =>{
+
     dispatch(receiveBoardShow(response.board));
     dispatch(receivePins(response.pins));
     dispatch(receivePinboards(response.pinboards));
@@ -82,3 +83,4 @@ export const updateBoard = (board) => (dispatch) => {
 export const deleteBoard = (boardId) => (dispatch) => {
   return BoardAPIUtil.deleteBoard(boardId).then((boardId) => dispatch(removeBoard(boardId)));
 };
+

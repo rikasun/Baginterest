@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
 
   handleDemoSubmit(e) {
     e.preventDefault();
-    let password = "demo25";
+    let password = "demo25555555555";
     const demoLoginEffect = () => {
       setTimeout(() => {
         if (password.length > 0) {

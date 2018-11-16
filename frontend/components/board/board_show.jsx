@@ -7,46 +7,36 @@ class BoardShow extends React.Component{
 
   constructor(props) {
     super(props);
-    // this.renderItems = this.renderItems.bind(this);
     this.state = {loading: true}
-
     setTimeout(() => this.setState({loading:false}), 2000);
-    // this.deleteHandle = this.deleteHandle.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
 
   componentDidMount(){
     this.props.fetchBoard(this.props.match.params.id);
-    // this.props.fetchPinBoards();
   }
 
-  // deleteHandle(id) {
-  //   this.props.deletePinFromBoard(id);
-  //   this.setState({loading: true});
-  //   // this.setState({loading: false});
-  //   setTimeout(() => this.setState({ loading: false }), 1000);
-  //   // this.props.fetchPinBoards
-  // }
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.pinBoards !== prevProps.pinBoards) {
-  //     this.props.fetchPinBoards();
-  //   }r t
-  // }
+  handleDelete(id) {
+    setTimeout(() => this.props.deletePinFromBoard(id), 500)
+    setTimeout(() => this.props.fetchBoard(this.props.match.params.id), 1000)
+    setTimeout(() => this.setState({loading: false}), 1500);
+    this.setState({ loading: true });
+  }
 
 
   render(){
 
-    let masonryOptions = {
-      transitionDuration: 0,
-      gutter: 20
-    };
+    // let masonryOptions = {
+    //   transitionDuration: 0,
+    //   gutter: 20
+    // };
     if (this.props.pins === undefined) return '';
 
     let pins = this.props.pins.map(pin => <div className="gallery-item">
         <button onClick={() => 
-        {this.props.deletePinFromBoard(pin.id);
-          this.props.fetchPinBoards();
-        }} className="delete-button">
+        {this.handleDelete(pin.id);}}   
+         className="delete-button">
           Delete
         </button>
         <img className="pin-photo" src={pin.photoUrl} />
@@ -76,27 +66,6 @@ class BoardShow extends React.Component{
     </div>
     )
   }
-
-  // renderItems() {
-  //   if (this.props.pins === undefined) return '';
-  //   //  debugger
-  //   let pins = this.props.pins.map(pin =>
-  //     <div className="gallery-item">
-      
-  //         <button
-  //         onClick={() => this.deleteHandle(pin.id)}
-  //           className="delete-button"
-  //           >Delete
-  //             </button>
-
-  //       <img className="pin-photo" src={pin.photoUrl}/>
-  //     </div>
-  //   );
-    
-
-  //   return pins;
-  // }
-
 }
 
 export default withRouter(BoardShow);
