@@ -2,6 +2,7 @@ class Api::PinboardsController < ApplicationController
   def create
     @pinboard = Pinboard.new(pinboard_params)
     if @pinboard.save
+      # debugger
       render :show
     else
       render json: @pinboard.errors.full_messages, status: 422
@@ -9,11 +10,10 @@ class Api::PinboardsController < ApplicationController
   end
   
 
-
+  # fetch current board pinBoard
   def index
-    
+    @pinboards = Pinboard.all
   end 
-
 
   def destroy
 

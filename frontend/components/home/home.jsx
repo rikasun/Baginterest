@@ -45,7 +45,7 @@ class Home extends React.Component {
     if (e.target.value === "Add new board...") {
       this.openModal();      
     } else {
-      return ''
+      this.setState({ ['boardId']: e.currentTarget.value });
     }  
   }
 
@@ -106,7 +106,9 @@ class Home extends React.Component {
           </div>
         </Modal>
         <div className="save-selector">
-          <select className="dropdown-selector" onChange={this.update("boardId")} onChange={this.handleSelect}>
+          <select className="dropdown-selector" 
+          // onChange={this.update("boardId")} 
+          onChange={this.handleSelect}>
             <option value="" selected={this.state.boardId ? "selected" : ""} disabled>
               Please select
             </option>

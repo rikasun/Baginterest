@@ -14,7 +14,7 @@ const pinsReducer = (state={}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_PINS:
-      return action.pins;
+      return merge({},action.pins);
     case RECEIVE_ALL_PINS:
       return merge({}, state, action.pins);
     case RECEIVE_BOARDS:

@@ -44,9 +44,9 @@ export const fetchUserBoards = (userId) => (dispatch) => {
 export const fetchBoard = (id) => (dispatch) => {
   return BoardAPIUtil.fetchBoard(id)
   .then(response =>{
+    dispatch(receivePinboards(response.pinboards));
     dispatch(receiveBoard(response.board));
     dispatch(receivePins(response.pins));
-    dispatch(receivePinboards(response.pinboards));
   }
  );
 };

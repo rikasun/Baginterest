@@ -46,7 +46,7 @@ class BoardIndex extends React.Component{
               
                 <div className="board-name">{board.boardName}</div>
                 </Link>
-                <div onClick={()=>this.props.openModal("editBoard")}><i class="far fa-edit"></i></div>
+                <div onClick={()=>this.props.openModal("editBoard")}><i className="far fa-edit"></i></div>
 
               </div>
             )

@@ -10,11 +10,13 @@ class BoardShow extends React.Component{
     this.state = {loading: true}
     setTimeout(() => this.setState({loading:false}), 2000);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handlePhoto = this.handlePhoto.bind(this);
   }
 
 
   componentDidMount(){
     this.props.fetchBoard(this.props.match.params.id);
+    // this.props.fetchPinBoards();
   }
 
   handleDelete(id) {
@@ -24,6 +26,13 @@ class BoardShow extends React.Component{
     this.setState({ loading: true });
   }
 
+  handlePhoto(id) {
+    if (this.props.pins[id]){
+      return this.props.pins[id].photoUrl
+    } else {
+      return ''
+    }
+  }
 
   render(){
 
@@ -31,16 +40,20 @@ class BoardShow extends React.Component{
     //   transitionDuration: 0,
     //   gutter: 20
     // };
-    if (this.props.pins === undefined) return '';
 
-    let pins = this.props.pins.map(pin => <div className="gallery-item">
-        <button onClick={() => 
-        {this.handleDelete(pin.id);}}   
-         className="delete-button">
-          Delete
-        </button>
-        <img className="pin-photo" src={pin.photoUrl} />
-      </div>);
+    let bags;
+   if (!!this.props.pinBoards) {
+      bags = this.props.pinBoards.map(bag => <div className="gallery-item">
+          <button onClick={() => {
+              this.handleDelete(bag.id);
+            }} className="delete-button">
+            Delete
+          </button>
+          <img className="pin-photo" src={this.handlePhoto(bag.pinId)} />
+        </div>);
+    } else {
+      return <div></div>
+    }
 
   // let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";
 
@@ -60,7 +73,7 @@ class BoardShow extends React.Component{
               className={'my-gallery-class-home'}
               columnClassName={"gallery-column"}
             >
-              {pins}
+              {bags}
           </Masonry>
         </div>
     </div>
