@@ -20,9 +20,8 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      board:{
-        boardName: ''
-      },
+      choosing: false,
+      boardName:'',
       boardId: 1, 
       loading: true, 
       modalIsOpen: false };
@@ -30,42 +29,32 @@ class Home extends React.Component {
     this.handleBoardSubmit = this.handleBoardSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.openModal = this.openModal.bind(this);
-    // this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchAllPins();
     this.props.fetchUserBoards(this.props.currentuserId);
+    this.props.fetchAllPins();
   }
 
   componentDidUpdate(){
-
+    
   }
 
   handleSelect(e) {
     if (e.target.value === "Add new board...") {
-   
-      this.openModal();
-      // this.setState({
-      //   board: Object.assign({}, this.state.board,{
-      //     ['boardName']: 'choosing'
-      //   })
-      // })
+      this.openModal();      
     } else {
-      // this.setState({
-      // board: Object.assign({}, this.state.board, {
-      //   ['boardName']: e.target.value
-      //  })
-      // })
+      return ''
     }  
   }
 
   handleBoardSubmit(e){
     // e.preventDefault();
     let board = {};
-    board.board_name = this.state.board.boardName;
-    this.props.createBoard(board);
+    board.board_name = this.state.boardName;
+    this.props.createBoard(board).then(() => this.closeModal());
+    
   }
   
   openModal() {
@@ -73,11 +62,9 @@ class Home extends React.Component {
   }
 
   closeModal() {
-    // if (this.state.board.boardName === "choosing") {
+    // if (this.state.choosing) {
     //   this.setState({
-    //     board: Object.assign({}, this.state.board, {
-    //       ["boardName"]: ""
-    //     })
+    //     choosing: false
     //   });
     // }
 
@@ -93,16 +80,15 @@ class Home extends React.Component {
 
   renderItems() {
 
-    let pins = this.props.pins.map(pin => (
-      <div className="gallery-item">
-        {/* <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          contentLabel="Success Modal"
-          style={statusStyle}
-        >
+    let pins = this.props.pins.map(pin => <div className="gallery-item">
+        <Modal isOpen={this.state.modalIsOpen} 
+        onRequestClose={this.closeModal} 
+        contentLabel="Success Modal" 
+        style={statusStyle} 
+        ariaHideApp={false}>
           <div id="create-board-modal">
             <h3>Create a new board</h3>
+
             <form onSubmit={this.handleBoardSubmit}>
               <label>
                 <div className="board-form-name">
@@ -110,30 +96,23 @@ class Home extends React.Component {
                   <input
                     type="text"
                     required
-                    onChange={this.handleBoardSubmit('boardName')}
+                    onChange={this.update('boardName')}
                   />
                 </div>
               </label>
               <button className="create-button">Create</button>
             </form>
+
           </div>
-        </Modal> */}
+        </Modal>
         <div className="save-selector">
-          
-          <select
-            className="dropdown-selector"
-            onChange={this.update("boardId")}
-          >
-            <option
-              value=""
-              selected={this.state.boardId ? "selected" : ""}
-              disabled
-            >
+          <select className="dropdown-selector" onChange={this.update("boardId")} onChange={this.handleSelect}>
+            <option value="" selected={this.state.boardId ? "selected" : ""} disabled>
               Please select
             </option>
-            <option selected="" onClick={this.openModal}>Add new board...</option>
-
-            
+            <option selected="" onClick={this.openModal}>
+              Add new board...
+            </option>
 
             {this.props.boards.map((board, idx) => (
               <option key={idx} value={board.id}>
@@ -142,24 +121,20 @@ class Home extends React.Component {
             ))}
           </select>
 
-          <button
-            onClick={() => this.props.addPinToBoard(this.state.boardId, pin.id)}
-            className="save-button"
-          >
+          <button onClick={() => this.props.addPinToBoard(this.state.boardId, pin.id)} className="save-button">
             Save
           </button>
         </div>
 
         <img className="pin-photo" src={pin.photoUrl} />
-        
-      </div>
-    ));
+      </div>);
 
     return pins;
   }
 
   render() {
     // let masonryOptions = {
+    //   breakpointColumnsObj: 4,
     //   transitionDuration: 0,
     //   gutter: 20
     // };
