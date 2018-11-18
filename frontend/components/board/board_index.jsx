@@ -27,7 +27,6 @@ class BoardIndex extends React.Component{
   }
 
   render(){
-      let { boards, pins } = this.props
       return (
         <div className="board-display">
           <div className="create-board-box" onClick={() => this.props.openModal("createBoard")}>
@@ -38,7 +37,7 @@ class BoardIndex extends React.Component{
             return (
 
               <div>
-                <Link to={`/boards/${board.id}`}>
+                <Link className="board-name-link" to={`/boards/${board.id}`}>
                   <div
                     className="single-board">
                     {this.renderPins(board)}
@@ -46,7 +45,7 @@ class BoardIndex extends React.Component{
               
                 <div className="board-name">{board.boardName}</div>
                 </Link>
-                <div onClick={()=>this.props.openModal("editBoard")}><i className="far fa-edit"></i></div>
+                {/* <div onClick={()=>this.props.openModal("editBoard")}><i className="far fa-edit"></i></div> */}
 
               </div>
             )

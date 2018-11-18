@@ -135,15 +135,20 @@
     }
 }
 
-.board-name {
+.board-name{
   font-size: 18px;
   font-family: sans-serif;
   color: #808080b5;
   font-weight: 600;
   margin-left: 19px;
-    margin-top: -28px;
+  margin-top: -28px;
   text-decoration: none;
 }
+
+.board-name-link {
+  text-decoration: none;
+}
+
 
 .my-gallery-class {
   display: -webkit-box; /* Not needed if autoprefixing */

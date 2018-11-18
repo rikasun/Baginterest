@@ -18,10 +18,10 @@ class BoardIndexItem extends React.Component{
 
   render(){
 
-    let masonryOptions = {
-      transitionDuration: 0,
-      gutter: 20
-    };
+    // let masonryOptions = {
+    //   transitionDuration: 0,
+    //   gutter: 20
+    // };
 
     if (this.props.board[0] === undefined) return "";
     return (
