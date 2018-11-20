@@ -3,13 +3,13 @@ import { logout } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 import Nav from './nav';
-// import SearchBar from './search_bar'
+import { fetchAllPins } from "../../actions/pin_actions";
 
-const mapStateToProps = ({ session, entities: { users }, ui }) => {
-  return {
-    currentUser: users[session.id],
-    modal: ui.modal
-  };
+const mapStateToProps = ({ session, entities: { users }, ui, entities }) => {
+  return { 
+    currentUser: users[session.id], 
+    modal: ui.modal, 
+    pins: Object.values(entities.pins)}
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -17,7 +17,8 @@ const mapDispatchToProps = dispatch => ({
     return dispatch(logout());
   },
   openModal: modal => dispatch(openModal(modal)),
-  closeModal: () => dispatch(closeModal())
+  closeModal: () => dispatch(closeModal()),
+  fetchAllPins: () => dispatch(fetchAllPins())
 });
 
 export default connect(

@@ -11,7 +11,7 @@ class Search extends React.Component {
     super(props);
     this.updateQuery = this.updateQuery.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.fuzzSearch = this.fuzzSearch.bind(this);
     this.state = { query: '', results: [] };
   }
@@ -32,17 +32,9 @@ class Search extends React.Component {
       "description",
     ]
     };
-    // let allPins = this.props.pins;
-    let allPins = [
-      { id:1, description:'chanel'},
-      {id:2, description: 'fendi'}
-    ]
-
-    console.log(allPins)
-    // debugger
+    let allPins = this.props.pins;
     let fuse = new Fuse(allPins, options);
     let res = fuse.search(this.state.query);
-    // debugger
     return res;
   }
 
@@ -53,16 +45,13 @@ class Search extends React.Component {
   updateQuery(query) {
     let results = [];
     if (query.length > 0) {
-      // results = symbols.filter(symbol =>
-      //   this._matches(symbol.symbol, query) || this._matches(symbol.name, query)
-      // );
       results = this.fuzzSearch();
     }
     this.setState({ query, results });
   }
 
   _matches(string, query) {
-    return string.toLowerCase().startsWith(query.toLowerCase());
+    return string.startsWith(query);
   }
 
   focus(e) {
@@ -74,14 +63,14 @@ class Search extends React.Component {
     setTimeout(() => target.classList.remove('focus'), 100);
   }
 
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   const results = this.state.results;
-  //   if (results.length > 0) {
-  //     this.props.history.push(`/pins/${results[0].symbol.toLowerCase()}`);
-  //     this.updateQuery('');
-  //   }
-  // }
+  handleSubmit(e) {
+    e.preventDefault();
+    const results = this.state.results;
+    if (results.length > 0) {
+      this.props.history.push(`/pins/${results[0].id}`);
+      this.updateQuery('');
+    }
+  }
 
   render() {
     const results = this.state.results;
@@ -89,7 +78,7 @@ class Search extends React.Component {
     return (
       <div onFocus={this.focus} onBlur={this.blur} className="good-search-bar">
         <form 
-        // onSubmit={this.handleSubmit}
+        onSubmit={this.handleSubmit}
         >
           <input
             type="text"
@@ -103,12 +92,12 @@ class Search extends React.Component {
           <ul>
             <h3>Pins</h3>
             {results.slice(0, 10).map(result =>
-              <li key={result.description}>
-                {/* <Link
+              <li key={result.id}>
+                <Link
                   onClick={() => this.updateQuery('')}
-                  to={`/pins/${result.symbol.toLowerCase()}`}> */}
+                  to={`/pins/${result.id}`}>
                   <Match string={result.description} query={query} />
-                {/* </Link> */}
+                </Link>
               </li>
             )}
           </ul>

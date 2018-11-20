@@ -46,6 +46,7 @@ class Home extends React.Component {
 
   renderItems() {
 
+
     let pins = this.props.pins.map(pin => <div className="gallery-item">
   
         <div className="save-selector">
@@ -80,6 +81,7 @@ class Home extends React.Component {
     if (this.state.loading) {
       return <BounceLoading state={this.state} />;
     }
+    console.log(this.props)
     return (
       <div className="pin-display">
         <Masonry

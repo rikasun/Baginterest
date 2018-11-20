@@ -48,6 +48,7 @@ header {
     }
   }
   ul {
+    background-color: whitesmoke;
     display: none;
     font-size: 18px;
     font-weight: 500;
@@ -102,4 +103,10 @@ nav {
     }
   }
   
+}
+
+
+.pin-show {
+  top: 500px;
+  left: 500px;
 }

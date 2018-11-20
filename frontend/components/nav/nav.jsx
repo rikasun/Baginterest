@@ -1,26 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Search from "./search";
+import lifecycle from 'react-pure-lifecycle';
 
 
 
-const Nav = ({ currentUser, logout, openModal, history, modal }) => {
-
-  let url = "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";
+const Nav = ({
+  currentUser,
+  logout,
+  history,
+  modal,
+  pins,
+  fetchAllPins,
+}) => {
+  let url =
+    "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";
   const sessionLinks = () => {
-    if (modal === 'signup') {
+    if (modal === "signup") {
       return (
         <nav className="login-signup">
-          <button className="corner-login-button" onClick={() => history.push('/login')}>Log in</button>
+          <button
+            className="corner-login-button"
+            onClick={() => history.push("/login")}
+          >
+            Log in
+          </button>
         </nav>
       );
     } else {
-      return (
-        <div></div>
-      )
+      return <div />;
     }
   };
-  const personalGreeting = () => <nav>
+
+  
+  
+
+ 
+  const personalGreeting = () => (
+    <nav>
       <ul className="nav-bar">
         <li>
           <Link to="/">
@@ -32,7 +49,7 @@ const Nav = ({ currentUser, logout, openModal, history, modal }) => {
         <i className="fas fa-search fa-search-icon" /> */}
 
         <li>
-          <Search />
+          <Search pins={pins} />
         </li>
 
         {/* <input className="search-bar-content" type="search" placeholder="Search" /> */}
@@ -47,18 +64,26 @@ const Nav = ({ currentUser, logout, openModal, history, modal }) => {
           </Link>
         </li>
 
-        <li className="hamburger">
-          <button className="logout-button" onClick={() => logout().then(() =>
-                history.push("/login")
-              )}>
+        <li>
+          <button
+            className="logout-button"
+            onClick={() => logout().then(() => history.push("/login"))}
+          >
             Log Out
           </button>
         </li>
       </ul>
-    </nav>;
+    </nav>
+  );
 
   return currentUser ? personalGreeting() : sessionLinks();
 };
 
+const methods = {
+  componentDidMount(props) {
+    props.fetchAllPins;
+  }
+};
 
-export default Nav;
+
+export default lifecycle(methods)(Nav);
