@@ -22,9 +22,9 @@ import { AuthRoute, ProtectedRoute, RedirectIfLoggedOut } from '../util/route_ut
 const App = ({store}) => (
   <div>
     <Modal />
-    <nav>
+    <header>
       <NavContainer />
-    </nav>
+    </header>
     <Switch>
       <AuthRoute exact path="/login" component={Modal}/>
       <AuthRoute exact path="/signup" component={Modal}/>

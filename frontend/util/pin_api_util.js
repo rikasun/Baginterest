@@ -28,6 +28,7 @@ export const createPin = (data) => (
     contentType: false
   })
 );
+
 export const updatePin = (pin) => (
   $.ajax({
     method: 'PATCH',
@@ -35,9 +36,11 @@ export const updatePin = (pin) => (
     data: {pin}
   })
 );
+
 export const deletePin = (id) => (
   $.ajax({
     method: 'DELETE',
     url: `/api/pins/${id}`
   })
 );
+

@@ -1,0 +1,105 @@
+header {
+  height: 50px;
+  left: 0;
+  overflow: visible;
+  padding-top: 14px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.good-search-bar {
+  border: 1px solid $light-border;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 1px 0 1px 0;
+  position: relative;
+  transition: border-color .15s ease-out, box-shadow .15s ease-out;
+  width: 480px;
+  z-index: 5;
+  
+  .search-icon {
+    fill: $light-placeholder;
+    left: 20px;
+    color: darkgray;
+    position: absolute;
+    top: 12px;
+    transition: fill .15s ease-out;
+
+  }
+  input {
+    border: none;
+    color: darkgray;
+    font-size: inherit;
+    line-height: 34px;
+    outline: none;
+    padding: 0 0px 0 60px;
+    // width: 100%;
+  }
+  &:hover, &.focus {
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.01), 0 3px 24px rgba(48,51,51,.09);
+    & ::placeholder {
+      color: rgb(23, 23, 24);
+    }
+    .search-icon {
+      fill: rgb(23, 23, 24);
+    }
+  }
+  ul {
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    list-style: none;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0 24px 24px 24px;
+    .symbol {
+      display: inline-block;
+      width: 75px;
+    }
+    li {
+      line-height: 28px;
+    }
+  }
+  &.focus {
+    ul {
+      display: block;
+    }
+  }
+  h3 {
+    color: gray;
+    margin-bottom: 12px;
+  }
+  .matching {
+    color: pink;
+    // .red & {
+    //   color: rgb(244, 85, 49);
+    // }
+  }
+}
+
+nav {
+  position: absolute;
+  top: 15;
+
+  ul {
+    display: flex;
+    line-height: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-right: 120px;
+   
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+    li:first-child{
+      margin-left:30px;
+    }
+  }
+  
+}

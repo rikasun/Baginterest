@@ -6,7 +6,7 @@
 .name-photo {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 140px;
 }
 .user-displayname {
   font-size: 35px;
@@ -179,6 +179,7 @@
   padding: 20px;
   border-radius: 7px;
   background-clip: padding-box;
+  margin-top:15px;
   // position: relative;
   // min-width: 300px;
 }
@@ -270,6 +271,6 @@ div.save-selector {
   font-size: 31px;
     font-family: sans-serif;
     color: dimgray;
-    padding-top: 60px;
+    padding-top: 120px;
     text-align: center;
 }

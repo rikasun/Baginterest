@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from "./search_bar";
+import Search from "./search";
 
 
 
@@ -20,36 +20,42 @@ const Nav = ({ currentUser, logout, openModal, history, modal }) => {
       )
     }
   };
-  const personalGreeting = (openModal, closeModal) => <div className="nav-bar">
-      <div>
-        <Link to="/">
-          <i className="fab fa-pinterest fa-nav" />
-        </Link>
-      </div>
+  const personalGreeting = () => <nav>
+      <ul className="nav-bar">
+        <li>
+          <Link to="/">
+            <i className="fab fa-pinterest fa-nav" />
+          </Link>
+        </li>
 
-      <div className="search-bar">
-        <i className="fas fa-search fa-search-icon" />
-        
-        {/* <SearchBar openModal={openModal} closeModal={closeModal} /> */}
-      
-        <input className="search-bar-content" type="search" placeholder="Search" />
-      </div>
+        {/* <div className="search-bar">
+        <i className="fas fa-search fa-search-icon" /> */}
 
-      <Link className="user-name" to={`/users/${currentUser.id}`}>
-        <img className="nav-profile" src={url} alt="user profile link" />
-        <div className="nav-displayname">
-          {currentUser.username || currentUser.email.split("@")[0]}
-        </div>
-      </Link>
+        <li>
+          <Search />
+        </li>
 
-      <div className="hamburger">
-        <button className="logout-button" onClick={() => logout().then(() =>
-              history.push("/login")
-            )}>
-          Log Out
-        </button>
-      </div>
-    </div>;
+        {/* <input className="search-bar-content" type="search" placeholder="Search" /> */}
+        {/* </div> */}
+
+        <li>
+          <Link className="user-name" to={`/users/${currentUser.id}`}>
+            <img className="nav-profile" src={url} alt="user profile link" />
+            <div className="nav-displayname">
+              {currentUser.username || currentUser.email.split("@")[0]}
+            </div>
+          </Link>
+        </li>
+
+        <li className="hamburger">
+          <button className="logout-button" onClick={() => logout().then(() =>
+                history.push("/login")
+              )}>
+            Log Out
+          </button>
+        </li>
+      </ul>
+    </nav>;
 
   return currentUser ? personalGreeting() : sessionLinks();
 };
