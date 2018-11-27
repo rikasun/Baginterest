@@ -1,9 +1,8 @@
 import React from "react";
-import { fetchAllPins } from "../../actions/pin_actions";
 
 class PinShow extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
   }
 
   componentDidMount(){
@@ -12,7 +11,7 @@ class PinShow extends React.Component {
   render() {
     
     return (
-     <div className="pin-show">Hello!</div>
+     <div className="pin-show">This is the search result</div>
      )
    }
 }

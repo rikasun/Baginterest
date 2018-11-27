@@ -93,9 +93,10 @@ class Search extends React.Component {
             <h3>Pins</h3>
             {results.slice(0, 10).map(result =>
               <li key={result.id}>
-                <Link
+                <Link 
                   onClick={() => this.updateQuery('')}
-                  to={`/pins/${result.id}`}>
+                  to={`/pins/${result.id}`}
+                  >
                   <Match string={result.description} query={query} />
                 </Link>
               </li>

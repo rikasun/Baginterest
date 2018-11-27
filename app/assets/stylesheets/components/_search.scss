@@ -7,6 +7,7 @@ header {
   right: 0;
   top: 0;
   z-index: 0;
+  // text-decoration: none;
 }
 
 .good-search-bar {
@@ -19,6 +20,7 @@ header {
   transition: border-color .15s ease-out, box-shadow .15s ease-out;
   width: 480px;
   z-index: 5;
+  // text-decoration: none;
   
   .search-icon {
     fill: $light-placeholder;

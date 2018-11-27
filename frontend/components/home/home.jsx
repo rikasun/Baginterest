@@ -2,6 +2,7 @@ import React from 'react';
 import {withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import BounceLoading from '../spinner';
+import { SSL_OP_EPHEMERAL_RSA } from 'constants';
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class Home extends React.Component {
       setTimeout(() => this.setState({ loading: false }), 1000);
     this.handleBoardSubmit = this.handleBoardSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
@@ -29,7 +31,7 @@ class Home extends React.Component {
     }  
   }
 
-  handleBoardSubmit(e){
+  handleBoardSubmit(){
     // e.preventDefault();
     let board = {};
     board.board_name = this.state.boardName;
@@ -37,6 +39,18 @@ class Home extends React.Component {
     
   }
   
+  handleClick(id1, id2, e){
+    e.preventDefault();
+    this.props.addPinToBoard(id1, id2);
+    console.log(e.currentTarget.textContent)
+    // debugger
+    if (e.currentTarget.textContent === 'Save') {
+      e.currentTarget.textContent = 'Saved';
+      // setTimeout((e) => e.currentTarget.textContent = 'Save', 1000)
+      // e.currentTarget.textContent = 'Save';
+    
+    }
+  }
   update(field) {
     return e =>
       this.setState({
@@ -66,7 +80,7 @@ class Home extends React.Component {
             ))}
           </select>
 
-          <button onClick={() => this.props.addPinToBoard(this.state.boardId, pin.id)} className="save-button">
+          <button onClick={(e)=> this.handleClick(this.state.boardId, pin.id, e)} className="save-button">
             Save
           </button>
         </div>
