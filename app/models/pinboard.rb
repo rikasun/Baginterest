@@ -6,10 +6,8 @@ class Pinboard < ApplicationRecord
     foreign_key: :pin_id,
     class_name: :Pin
     
-
   belongs_to :board,
     primary_key: :id,
     foreign_key: :board_id,
-    class_name: :Board
-   
+    class_name: :Board   
 end 

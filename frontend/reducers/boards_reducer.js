@@ -7,8 +7,6 @@ import {
   RECEIVE_BOARD_SHOW
 } from '../actions/board_actions';
 
-
-
 const boardsReducer = (state={}, action) => {
   Object.freeze(state);
   switch (action.type) {

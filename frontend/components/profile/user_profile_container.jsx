@@ -12,5 +12,4 @@ const mapDispatchToProps = dispatch => ({
   fetchUser: (id) => dispatch(fetchUser(id))
 })
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);

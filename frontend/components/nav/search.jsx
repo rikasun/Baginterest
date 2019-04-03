@@ -1,9 +1,8 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import Fuse from "fuse.js";
 import SearchSVG from './search_svg';
 import Match from './match';
-import { Link, withRouter } from 'react-router-dom';
-// import * as Fuse from "fuse.js";
-import Fuse from "fuse.js";
 
 class Search extends React.Component {
   

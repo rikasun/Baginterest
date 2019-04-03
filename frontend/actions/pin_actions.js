@@ -1,12 +1,10 @@
 import * as PinAPIUtil from '../util/pin_api_util';
-import { receivePinboards } from './pinboard_actions';
 
 export const RECEIVE_ALL_PINS = 'RECEIVE_ALL_PINS';
 export const RECEIVE_PINS = 'RECEIVE_PINS';
 export const RECEIVE_PIN = 'RECEIVE_PIN';
 export const REMOVE_PIN = 'REMOVE_PIN';
 export const RECEIVE_PIN_ERRORS = "RECEIVE_PIN_ERRORS";
-
 
 export const receiveAllPins = pins => ({
   type: RECEIVE_ALL_PINS,

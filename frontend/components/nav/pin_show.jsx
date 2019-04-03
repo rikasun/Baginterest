@@ -8,8 +8,7 @@ class PinShow extends React.Component {
   componentDidMount(){
     this.props.fetchAllPins;
   }
-  render() {
-    
+  render() { 
     return (
      <div className="pin-show">This is the search result</div>
      )

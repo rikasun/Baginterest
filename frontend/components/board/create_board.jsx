@@ -1,12 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 class CreateBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.board;
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   update(field) {
@@ -24,10 +22,6 @@ class CreateBoard extends React.Component {
     let board = {};
     board.board_name = this.state.boardName;
     this.props.createBoard(board).then(this.props.closeModal);
-  }
-
-  componentWillUnmount(){
-    // this.props.receiveBoardErrors([])
   }
 
   renderErrors() {
@@ -61,7 +55,6 @@ class CreateBoard extends React.Component {
           </form>
         </div>
       )
-
     }
 }
 

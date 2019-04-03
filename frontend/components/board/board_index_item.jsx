@@ -1,26 +1,20 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 
 class BoardIndexItem extends React.Component{
-
   constructor(props) {
     super(props);
     this.renderItems = this.renderItems.bind(this);
   }
 
-
   componentDidMount(){
     this.props.fetchBoard(this.props.match.params.id);
   }
 
-
-
-  render(){
-    
+  render(){   
     if (this.props.board[0] === undefined) return "";
     return (
-
         <div className="preview-pin-display">
           <Masonry
               breakpointCols={4}

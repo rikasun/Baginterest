@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import BounceLoading from '../spinner';
 
 class BoardShow extends React.Component{
-
   constructor(props) {
     super(props);
     this.state = {loading: true}
@@ -13,10 +12,8 @@ class BoardShow extends React.Component{
     this.handlePhoto = this.handlePhoto.bind(this);
   }
 
-
   componentDidMount(){
     this.props.fetchBoard(this.props.match.params.id);
-    // this.props.fetchPinBoards();
   }
 
   handleDelete(id) {
@@ -35,14 +32,8 @@ class BoardShow extends React.Component{
   }
 
   render(){
-
-    // let masonryOptions = {
-    //   transitionDuration: 0,
-    //   gutter: 20
-    // };
-
     let bags;
-   if (!!this.props.pinBoards) {
+    if (!!this.props.pinBoards) {
       bags = this.props.pinBoards.map(bag => <div className="gallery-item">
           <button onClick={() => {
               this.handleDelete(bag.id);
@@ -52,21 +43,19 @@ class BoardShow extends React.Component{
           <img className="pin-photo" src={this.handlePhoto(bag.pinId)} />
         </div>);
     } else {
+
       return <div></div>
     }
-
-  // let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";
-
+    
     if (this.props.board === undefined || this.state.loading) {
       return <BounceLoading state={this.state} />
     };
 
     return (
       <div>
-          <div className="board-name-show">
-            {this.props.board.boardName}
-          </div>
-
+        <div className="board-name-show">
+          {this.props.board.boardName}
+        </div>
         <div className="pin-display">
           <Masonry
               breakpointCols={4}

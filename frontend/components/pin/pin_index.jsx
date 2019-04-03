@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 
 class PinIndex extends React.Component{
-
   constructor(props) {
     super(props);
     this.state = {
@@ -11,12 +10,10 @@ class PinIndex extends React.Component{
     }
   }
 
-
   componentDidMount(){
     this.props.fetchUserPins(this.props.match.params.id);
     this.props.fetchUserBoards(this.props.currentuserId);
   }
-
 
   update(field) {
     return e => this.setState({
@@ -57,17 +54,14 @@ class PinIndex extends React.Component{
           <div className="overlay"></div>
       </div>
     );
-
     return createPin.concat(pins);
   }
 
   render(){
-
     let masonryOptions = {
       transitionDuration: 0,
       gutter: 20
     };
-
     return (
       <div className="pin-display">
         <Masonry

@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Search from "./search";
 import lifecycle from 'react-pure-lifecycle';
-
-
+import Search from "./search";
 
 const Nav = ({
   currentUser,
@@ -11,7 +9,6 @@ const Nav = ({
   history,
   modal,
   pins,
-  fetchAllPins,
 }) => {
   let url =
     "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png";

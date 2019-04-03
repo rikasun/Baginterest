@@ -2,7 +2,6 @@ import React from 'react';
 import {withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import BounceLoading from '../spinner';
-import { SSL_OP_EPHEMERAL_RSA } from 'constants';
 
 class Home extends React.Component {
   constructor(props) {
@@ -32,7 +31,6 @@ class Home extends React.Component {
   }
 
   handleBoardSubmit(){
-    // e.preventDefault();
     let board = {};
     board.board_name = this.state.boardName;
     this.props.createBoard(board).then(() => this.props.closeModal());
@@ -43,12 +41,8 @@ class Home extends React.Component {
     e.preventDefault();
     this.props.addPinToBoard(id1, id2);
     console.log(e.currentTarget.textContent)
-    // debugger
     if (e.currentTarget.textContent === 'Save') {
       e.currentTarget.textContent = 'Saved';
-      // setTimeout((e) => e.currentTarget.textContent = 'Save', 1000)
-      // e.currentTarget.textContent = 'Save';
-    
     }
   }
   update(field) {
@@ -59,10 +53,7 @@ class Home extends React.Component {
   }
 
   renderItems() {
-
-
     let pins = this.props.pins.map(pin => <div className="gallery-item">
-  
         <div className="save-selector">
           <select className="dropdown-selector" 
           onChange={this.handleSelect}>

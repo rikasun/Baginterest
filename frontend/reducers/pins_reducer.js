@@ -1,14 +1,11 @@
 import merge from 'lodash/merge';
-
 import {
   RECEIVE_PINS,
   RECEIVE_PIN,
   REMOVE_PIN,
   RECEIVE_ALL_PINS
 } from '../actions/pin_actions';
-
 import { RECEIVE_BOARDS } from '../actions/board_actions';
-
 
 const pinsReducer = (state={}, action) => {
   Object.freeze(state);

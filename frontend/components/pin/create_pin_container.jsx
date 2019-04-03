@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
-import React from 'react';
-import { receivePin, createPin, receivePinErrors } from '../../actions/pin_actions';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import { createPin } from '../../actions/pin_actions';
+import { closeModal } from '../../actions/modal_actions';
 import CreatePin from './create_pin';
 
 const mapStateToProps = (state) => {

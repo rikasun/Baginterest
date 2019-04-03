@@ -53,7 +53,6 @@ class User < ApplicationRecord
   end
 
   private
-
   def ensure_session_token
     generate_unique_session_token unless self.session_token
   end
@@ -69,5 +68,4 @@ class User < ApplicationRecord
     end
     self.session_token
   end
-
 end

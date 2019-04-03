@@ -19,6 +19,7 @@ export const createBoard = (board) => (
     data: {board}
   })
 );
+
 export const updateBoard = (board) => (
   $.ajax({
     method: 'PATCH',
@@ -26,6 +27,7 @@ export const updateBoard = (board) => (
     data: {board}
   })
 );
+
 export const deleteBoard = (id) => (
   $.ajax({
     method: 'DELETE',

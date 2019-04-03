@@ -8,7 +8,6 @@ class Api::PinboardsController < ApplicationController
     end
   end
   
-
   # fetch current board pinBoard
   def index
     @pinboards = Pinboard.all

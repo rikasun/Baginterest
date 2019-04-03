@@ -4,7 +4,6 @@ import {
   Redirect,
   Switch,
   Link,
-  HashRouter
 } from 'react-router-dom';
 import BoardIndexContainer from '../board/board_index_container'
 import PinIndexContainer from '../pin/pin_index_container'
@@ -13,16 +12,13 @@ class UserProfile extends React.Component{
 
   constructor(props) {
     super(props);
-
   }
-
 
   componentDidMount(){
     this.props.fetchUser(this.props.match.params.id);
   }
 
   render(){
-
     if (!this.props.user) return "";
     let url = this.props.user.profileUrl || "https://s3-us-west-1.amazonaws.com/bagquest-pro/profile/profile.png"
     return (
@@ -33,20 +29,15 @@ class UserProfile extends React.Component{
             <div className="user-displayname">
               {this.props.user.username || this.props.user.email.split("@")[0]}
             </div>
-
             <div>
               <Link  to={`/users/${this.props.user.id}/boards`}>{<img className="user-photo" src={url} alt="user profile link"/>}</Link>
-
             </div>
           </div>
-
-
 
           <div className="user-tabs">
             <Link className="user-board-text" to={`/users/${this.props.user.id}/boards`}>Boards</Link>
             <br/>
             <Link className="user-pin-text" to={`/users/${this.props.user.id}/pins`}>Pins</Link>
-
           </div>
 
         </div>
@@ -57,7 +48,6 @@ class UserProfile extends React.Component{
           <Route
             path="/users/:id/pins"
             render={(props) => <PinIndexContainer {...props} user={this.props.user}/>} />
-
           <Redirect to="/users/:id/boards"/>
         </Switch>
       </div>

@@ -57,9 +57,7 @@ class SessionForm extends React.Component {
   }
 
     render() {
-
       if (this.props.formType === "signup") {
-
         return (
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="signup-form-box">
@@ -69,44 +67,33 @@ class SessionForm extends React.Component {
 
               {this.renderErrors()}
               <div className="login-form">
-
-
                   <input type="text"
                     placeholder="Email"
                     value={this.state.email}
                     onChange={this.update('email')}
                     className="session-input"
                     />
-
                 <br/>
-
                   <input type="text"
                     placeholder="Display name"
                     value={this.state.username}
                     onChange={this.update('username')}
                     className="session-input"
                     />
-
                 <br/>
-
-
                   <input placeholder="Create a password"
                     type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="session-input"
                     />
-
                 <br/>
-
-
                   <input placeholder="Age"
                     type="number"
                     value={this.state.age}
                     onChange={this.update('age')}
                     className="session-input"
                     />
-
                 <br/>
                 <input className="session-submit" type="submit" value="Continue" />
               </div>
@@ -122,40 +109,29 @@ class SessionForm extends React.Component {
               <h2 className="session-header1">Welcome back</h2>
               <h4 className="session-header2">Login to see more</h4>
 
-
               {this.renderErrors()}
               <div className="login-form">
-
                   <input type="text"
                     placeholder="Email"
                     value={this.state.email}
                     onChange={this.update('email')}
                     className="session-input"
                     />
-
                 <br/>
-
-
                   <input placeholder="Password"
                     type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="session-input"
                     />
-
                 <br/>
                 <input className="session-submit" type="submit" value="Log in" />
-
-
                 <input onClick={this.handleDemoSubmit} className="session-submit" type="submit" value="Demo" />
               </div>
-
               <div className="redirect-link"><Link className="link-style" to="/signup">Need an account? Sign up now</Link></div>
-
             </form>
           </div>
         )
-
       }
     }
 }

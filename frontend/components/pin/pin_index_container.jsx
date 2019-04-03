@@ -21,5 +21,4 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal())
 })
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(PinIndex);

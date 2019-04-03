@@ -8,8 +8,6 @@ export const REMOVE_BOARD = 'REMOVE_BOARD';
 export const RECEIVE_BOARD_ERRORS = "RECEIVE_BOARD_ERRORS";
 export const RECEIVE_BOARD_SHOW = "RECEIVE_BOARD_SHOW";
 
-
-
 export const receiveBoards = boards => ({
   type: RECEIVE_BOARDS,
   boards
@@ -54,7 +52,6 @@ export const fetchBoard = (id) => (dispatch) => {
 export const fetchBoardShow = (id) => (dispatch) => {
   return BoardAPIUtil.fetchBoard(id)
   .then(response =>{
-
     dispatch(receiveBoardShow(response.board));
     dispatch(receivePins(response.pins));
     dispatch(receivePinboards(response.pinboards));

@@ -1,5 +1,5 @@
-import { connect } from 'react-redux';
 import Home from './home';
+import { connect } from 'react-redux';
 import { fetchAllPins } from '../../actions/pin_actions';
 import { fetchUserBoards } from '../../actions/board_actions';
 import { createPinBoard } from '../../actions/pinboard_actions';
@@ -23,6 +23,5 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),
   openModal: modal => dispatch(openModal(modal))
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

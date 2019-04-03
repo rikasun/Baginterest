@@ -1,11 +1,10 @@
 import React from 'react';
-import { closeModal, openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+import { closeModal, openModal } from '../../actions/modal_actions';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import CreateBoardContainer from '../board/create_board_container';
 import CreatePinContainer from '../pin/create_pin_container';
-// import BoardIndexContainer from '../board/board_index_container';
 
 class Modal extends React.Component {
   constructor(props){
@@ -62,7 +61,6 @@ class Modal extends React.Component {
             </div>
           );
       break;
-
       case 'editBoard':
           return (
             <div className="board-modal-background" onClick={this.props.closeModal}>

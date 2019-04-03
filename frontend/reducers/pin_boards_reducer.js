@@ -5,9 +5,6 @@ import { RECEIVE_PINBOARD,
          REMOVE_PINBOARD
        } from '../actions/pinboard_actions';
 
-
-
-
 const pinBoardsReducer = (state={}, action) => {
   Object.freeze(state);
   switch (action.type) {
@@ -17,7 +14,6 @@ const pinBoardsReducer = (state={}, action) => {
       return action.pinBoards;
     case REMOVE_PINBOARD:
     let newState = merge({}, state)
-    // delete newState[action.pinBoard.id]
       let delKey = null;
       Object.keys(newState).forEach(key => {
         if(newState[key].pinId === action.pinBoard.id) {
@@ -25,7 +21,6 @@ const pinBoardsReducer = (state={}, action) => {
         }
       })
       delete newState[delKey];
-
       return newState;
     default:
       return state;
